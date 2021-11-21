@@ -1,0 +1,223 @@
+﻿<Controls:MetroWindow x:Class="EmployeeManagementSystem.Windows.PrintSelectionWindows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        xmlns:local="clr-namespace:EmployeeManagementSystem.Windows"              
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen" WindowTitleBrush="#FFEA485B"
+        GlowBrush="#FFEA485B" BorderThickness="2"
+        Title="Print Selection Dialog" Height="620" Width="710" ResizeMode="NoResize" 
+        ShowMaxRestoreButton="False" ShowMinButton="False">
+    <Controls:MetroWindow.RightWindowCommands>
+        <Controls:WindowCommands>
+            <ComboBox x:Name="PrintModeComboBox" SelectedIndex="0" Width="180" FontSize="15" Cursor="Hand" Margin="2">
+                <ComboBoxItem Content="Landscape"/>
+                <ComboBoxItem Content="Portrait"/>
+            </ComboBox>
+            
+            <Button x:Name="HeaderPrintButton" Cursor="Hand" Click="HeaderPrintButton_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="20"
+                   Height="20"
+                   Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
+                        <Rectangle.OpacityMask>
+                            <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_printer_blank}" />
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
+                    <TextBlock Margin="4 0 0 0"
+                   VerticalAlignment="Center"
+                   Text="Click here to Print" />
+                </StackPanel>
+            </Button>
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.RightWindowCommands>
+    
+    
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+        <TextBlock x:Name="InstructionTextBlock" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="Select Columns to print, you shouldn't print all column at once due to page and printer limitaion. (e.g max 9-10 column at once)" Margin="2" FontWeight="DemiBold" Background="#FFFAFFBD"/>
+
+        <ScrollViewer Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Height="350" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+            <Grid Grid.ColumnSpan="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock x:Name="EidTextBlock" Grid.Row="1" Grid.Column="0" Text="Eid" Margin="2"/>
+                <Border Grid.Row="1" Grid.Column="0" BorderThickness="0.6" BorderBrush="Black"/>
+                <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" BorderThickness="0.6" BorderBrush="Black"/>
+                <TextBlock x:Name="NameTextBlock" Grid.Row="2" Grid.Column="0" Text="Name" Margin="2"/>
+                <Border Grid.Row="2" Grid.Column="0" BorderThickness="0.6" BorderBrush="Black"/>
+                <Border Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" BorderThickness="0.6" BorderBrush="Black"/>
+                <TextBlock x:Name="FHTextBlock" Grid.Row="3" Grid.Column="0" Text="FatherOrHusbandName" Margin="2"/>
+                <Border Grid.Row="3" Grid.Column="0" BorderThickness="0.6" BorderBrush="Black"/>
+                <Border Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" BorderThickness="0.6" BorderBrush="Black"/>
+                <TextBlock x:Name="RelationTextBlock" Grid.Row="4" Grid.Column="0" Text="Relation" Margin="2"/>
+                <Border Grid.Row="4" Grid.Column="0" BorderThickness="0.6" BorderBrush="Black"/>
+                <Border Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" BorderThickness="0.6" BorderBrush="Black"/>
+                <TextBlock x:Name="UANTextBlock" Grid.Row="5" Grid.Column="0" Text="UAN" Margin="2"/>
+                <Border Grid.Row="5" Grid.Column="0" BorderThickness="0.6" BorderBrush="Black"/>
+                <Border Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" BorderThickness="0.6" BorderBrush="Black"/>
+                <TextBlock x:Name="ESICTextBlock" Grid.Row="6" Grid.Column="0" Text="ESIC" Margin="2"/>
+                <Border Grid.Row="6" Grid.Column="0" BorderThickness="0.6" BorderBrush="Black"/>
+                <Border Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" BorderThickness="0.6" BorderBrush="Black"/>
+                <TextBlock  x:Name="MobileTextBlock" Grid.Row="7" Grid.Column="0" Text="Mobile" Margin="2"/>
+                <Border Grid.Row="7" Grid.Column="0" BorderThickness="0.6" BorderBrush="Black"/>
+                <Border Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" BorderThickness="0.6" BorderBrush="Black"/>
+                <TextBlock x:Name="AadhaarTextBlock" Grid.Row="8" Grid.Column="0" Text="Aadhaar" Margin="2"/>
+                <Border Grid.Row="8" Grid.Column="0" BorderThickness="0.6" BorderBrush="Black"/>
+                <Border Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2" BorderThickness="0.6" BorderBrush="Black"/>
+                <TextBlock x:Name="GenderTextBlock" Grid.Row="9" Grid.Column="0" Text="Gender" Margin="2"/>
+                <Border Grid.Row="9" Grid.Column="0" BorderThickness="0.6" BorderBrush="Black"/>
+                <Border Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="2" BorderThickness="0.6" BorderBrush="Black"/>
+                <TextBlock x:Name="EmailTextBlock" Grid.Row="10" Grid.Column="0" Text="Email" Margin="2"/>
+                <Border Grid.Row="10" Grid.Column="0" BorderThickness="0.6" BorderBrush="Black"/>
+                <Border Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2" BorderThickness="0.6" BorderBrush="Black"/>
+                <TextBlock x:Name="DOJTextBlock" Grid.Row="11" Grid.Column="0" Text="DOJ" Margin="2"/>
+                <Border Grid.Row="11" Grid.Column="0" BorderThickness="0.6" BorderBrush="Black"/>
+                <Border Grid.Row="11" Grid.Column="1" Grid.ColumnSpan="2" BorderThickness="0.6" BorderBrush="Black"/>
+                <TextBlock x:Name="DOLTextBlock" Grid.Row="12" Grid.Column="0" Text="DOL" Margin="2"/>
+                <Border Grid.Row="12" Grid.Column="0" BorderThickness="0.6" BorderBrush="Black"/>
+                <Border Grid.Row="12" Grid.Column="1" Grid.ColumnSpan="2" BorderThickness="0.6" BorderBrush="Black"/>
+                <TextBlock  x:Name="DOBTextBlock" Grid.Row="13" Grid.Column="0" Text="DOB" Margin="2"/>
+                <Border Grid.Row="13" Grid.Column="0" BorderThickness="0.6" BorderBrush="Black"/>
+                <Border Grid.Row="13" Grid.Column="1" Grid.ColumnSpan="2" BorderThickness="0.6" BorderBrush="Black"/>
+                <TextBlock x:Name="IFSCTextBlock" Grid.Row="14" Grid.Column="0" Text="IFSC" Margin="2"/>
+                <Border Grid.Row="14" Grid.Column="0" BorderThickness="0.6" BorderBrush="Black"/>
+                <Border Grid.Row="14" Grid.Column="1" Grid.ColumnSpan="2" BorderThickness="0.6" BorderBrush="Black"/>
+                <TextBlock x:Name="AccountTextBlock" Grid.Row="15" Grid.Column="0" Text="Account" Margin="2"/>
+                <Border Grid.Row="15" Grid.Column="0" BorderThickness="0.6" BorderBrush="Black"/>
+                <Border Grid.Row="15" Grid.Column="1" Grid.ColumnSpan="2" BorderThickness="0.6" BorderBrush="Black"/>
+                <Border Grid.Row="16" Grid.Column="0" BorderThickness="0.6" BorderBrush="Black"/>
+                <Border Grid.Row="16" Grid.Column="1" Grid.ColumnSpan="2" BorderThickness="0.6" BorderBrush="Black"/>
+                <TextBlock x:Name="RoleTextBlock" Grid.Row="17" Grid.Column="0" Text="Role" Margin="2"/>
+                <Border Grid.Row="17" Grid.Column="0" BorderThickness="0.6" BorderBrush="Black"/>
+                <Border Grid.Row="17" Grid.Column="1" Grid.ColumnSpan="2" BorderThickness="0.6" BorderBrush="Black"/>
+                <TextBlock x:Name="AddressTextBlock" Grid.Row="18" Grid.Column="0" Text="Address" Margin="2"/>
+                <Border Grid.Row="18" Grid.Column="0" BorderThickness="0.6" BorderBrush="Black"/>
+                <Border Grid.Row="18" Grid.Column="1" Grid.ColumnSpan="2" BorderThickness="0.6" BorderBrush="Black"/>
+                <TextBlock x:Name="ImageTextBlock" Grid.Row="19" Grid.Column="0" Text="Image" Margin="2"/>
+                <Border Grid.Row="19" Grid.Column="0" BorderThickness="0.6" BorderBrush="Black"/>
+                <Border Grid.Row="19" Grid.Column="1" Grid.ColumnSpan="2" BorderThickness="0.6" BorderBrush="Black"/>
+
+                <CheckBox x:Name="EidCheckBox" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Margin="2" Checked="EidCheckBox_Checked" Unchecked="EidCheckBox_Unchecked"/>
+                <CheckBox x:Name="NameCheckBox" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" Margin="2" Checked="NameCheckBox_Checked" Unchecked="NameCheckBox_Unchecked"/>
+                <CheckBox x:Name="FHCheckBox" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" Margin="2" Checked="FHCheckBox_Checked" Unchecked="FHCheckBox_Unchecked"/>
+                <CheckBox x:Name="RelationCheckBox" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" Margin="2" Checked="RelationCheckBox_Checked" Unchecked="RelationCheckBox_Unchecked"/>
+                <CheckBox x:Name="UANCheckBox" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" Margin="2" Checked="UANCheckBox_Checked" Unchecked="UANCheckBox_Unchecked"/>
+                <CheckBox x:Name="ESICCheckBox" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Center" Margin="2" Checked="ESICCheckBox_Checked" Unchecked="ESICCheckBox_Unchecked"/>
+                <CheckBox x:Name="MobileCheckBox" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Center" Margin="2" Checked="MobileCheckBox_Checked" Unchecked="MobileCheckBox_Unchecked"/>
+                <CheckBox x:Name="AadhaarCheckBox" Grid.Row="8" Grid.Column="1" HorizontalAlignment="Center" Margin="2" Checked="AadhaarCheckBox_Checked" Unchecked="AadhaarCheckBox_Unchecked"/>
+                <CheckBox x:Name="GenderCheckBox" Grid.Row="9" Grid.Column="1" HorizontalAlignment="Center" Margin="2" Checked="GenderCheckBox_Checked" Unchecked="GenderCheckBox_Unchecked"/>
+                <CheckBox x:Name="EmailCheckBox" Grid.Row="10" Grid.Column="1" HorizontalAlignment="Center" Margin="2" Checked="EmailCheckBox_Checked" Unchecked="EmailCheckBox_Unchecked"/>
+                <CheckBox x:Name="DOJCheckBox" Grid.Row="11" Grid.Column="1" HorizontalAlignment="Center" Margin="2" Checked="DOJCheckBox_Checked" Unchecked="DOJCheckBox_Unchecked"/>
+                <CheckBox x:Name="DOLCheckBox" Grid.Row="12" Grid.Column="1" HorizontalAlignment="Center" Margin="2" Checked="DOLCheckBox_Checked" Unchecked="DOLCheckBox_Unchecked"/>
+                <CheckBox x:Name="DOBCheckBox" Grid.Row="13" Grid.Column="1" HorizontalAlignment="Center" Margin="2" Checked="DOBCheckBox_Checked" Unchecked="DOBCheckBox_Unchecked"/>
+                <CheckBox x:Name="IFSCCheckBox" Grid.Row="14" Grid.Column="1" HorizontalAlignment="Center" Margin="2" Checked="IFSCCheckBox_Checked" Unchecked="IFSCCheckBox_Unchecked"/>
+                <CheckBox x:Name="AccountCheckBox" Grid.Row="15" Grid.Column="1" HorizontalAlignment="Center" Margin="2" Checked="AccountCheckBox_Checked" Unchecked="AccountCheckBox_Unchecked"/>
+                <CheckBox x:Name="RoleCheckBox" Grid.Row="17" Grid.Column="1" HorizontalAlignment="Center" Margin="2" Checked="RoleCheckBox_Checked" Unchecked="RoleCheckBox_Unchecked"/>
+                <CheckBox x:Name="AddressCheckBox" Grid.Row="18" Grid.Column="1" HorizontalAlignment="Center" Margin="2" Checked="AddressCheckBox_Checked" Unchecked="AddressCheckBox_Unchecked"/>
+                <CheckBox x:Name="ImageCheckBox" Grid.Row="19" Grid.Column="1" HorizontalAlignment="Center" Margin="2" Checked="ImageCheckBox_Checked" Unchecked="ImageCheckBox_Unchecked"/>
+
+                <TextBlock x:Name="CPEidTextBlock" Grid.Row="1" Grid.Column="2" Margin="2" Visibility="Collapsed"/>
+                <TextBlock x:Name="CPNameTextBlock" Grid.Row="2" Grid.Column="2" Margin="2" Visibility="Collapsed"/>
+                <TextBlock x:Name="CPFHTextBlock" Grid.Row="3" Grid.Column="2" Margin="2" Visibility="Collapsed"/>
+                <TextBlock x:Name="CPRelationTextBlock" Grid.Row="4" Grid.Column="2" Margin="2" Visibility="Collapsed"/>
+                <TextBlock x:Name="CPUANTextBlock" Grid.Row="5" Grid.Column="2" Margin="2" Visibility="Collapsed"/>
+                <TextBlock x:Name="CPESICTextBlock" Grid.Row="6" Grid.Column="2" Margin="2" Visibility="Collapsed"/>
+                <TextBlock x:Name="CPMobileTextBlock" Grid.Row="7" Grid.Column="2" Margin="2" Visibility="Collapsed"/>
+                <TextBlock x:Name="CPAadhaarTextBlock" Grid.Row="8" Grid.Column="2" Margin="2" Visibility="Collapsed"/>
+                <TextBlock x:Name="CPGenderTextBlock" Grid.Row="9" Grid.Column="2" Margin="2" Visibility="Collapsed"/>
+                <TextBlock x:Name="CPEmailTextBlock" Grid.Row="10" Grid.Column="2" Margin="2" Visibility="Collapsed"/>
+                <TextBlock x:Name="CPDOJTextBlock" Grid.Row="11" Grid.Column="2" Margin="2" Visibility="Collapsed"/>
+                <TextBlock x:Name="CPDOLTextBlock" Grid.Row="12" Grid.Column="2" Margin="2" Visibility="Collapsed"/>
+                <TextBlock  x:Name="CPDOBTextBlock" Grid.Row="13" Grid.Column="2" Margin="2" Visibility="Collapsed"/>
+                <TextBlock x:Name="CPIFSCTextBlock" Grid.Row="14" Grid.Column="2" Margin="2" Visibility="Collapsed"/>
+                <TextBlock x:Name="CPAccountTextBlock" Grid.Row="15" Grid.Column="2" Margin="2" Visibility="Collapsed"/>                
+                <TextBlock x:Name="CPRoleTextBlock" Grid.Row="17" Grid.Column="2" Margin="2" Visibility="Collapsed"/>
+                <TextBlock x:Name="CPAddressTextBlock" Grid.Row="18" Grid.Column="2" Margin="2" Visibility="Collapsed"/>
+                <TextBlock x:Name="CPImageTextBlock" Grid.Row="19" Grid.Column="2" Margin="2" Visibility="Collapsed"/>
+            </Grid>
+        </ScrollViewer>
+        
+
+        <Grid Grid.Row="2" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Separator Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Margin="2" VerticalAlignment="Top" />
+            
+            <WindowsFormsHost Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Margin="2" Visibility="Collapsed">
+                <wf:DataGridView x:Name="Printdgv" ColumnHeadersHeightSizeMode="AutoSize" AutoSizeRowsMode="DisplayedCells" AutoSizeColumnsMode="DisplayedCells"/>
+            </WindowsFormsHost>
+
+            
+            <Label Grid.Row="1" Grid.Column="0" Content="Title:" FontSize="13" Margin="2"/>
+            <TextBox x:Name="TitleTextBox" Grid.Row="1" Grid.Column="1" Height="25" Width="250" VerticalContentAlignment="Center" FontSize="13" Text="Employee List" Margin="2" Controls:TextBoxHelper.Watermark="Enter Title (Optional)" Controls:TextBoxHelper.ClearTextButton="True"/>
+
+            <Label Grid.Row="2" Grid.Column="0" Content="SubTitle:" FontSize="13" Margin="2"/>
+            <TextBox x:Name="SubTitleTextBox" Grid.Row="2" Grid.Column="1" Height="25" Width="250" VerticalContentAlignment="Center" FontSize="13" Margin="2" Controls:TextBoxHelper.Watermark="Enter Subtitle (Optional)" Controls:TextBoxHelper.ClearTextButton="True"/>
+
+            <Label Grid.Row="3" Grid.Column="0" Content="Print Page Number:" FontSize="13" Margin="2"/>
+            <CheckBox x:Name="PageCheckBox" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" Margin="2" Cursor="Hand" IsChecked="True"/>
+
+            <Label Grid.Row="4" Grid.Column="0" Content="Page Number Position:" FontSize="13" Margin="2"/>
+            <ComboBox x:Name="HFComboBox" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" Margin="2" Width="250" Cursor="Hand" SelectedIndex="1">
+                <ComboBoxItem Content="Header"/>
+                <ComboBoxItem Content="Footer"/>
+            </ComboBox>
+
+            <Label Grid.Row="5" Grid.Column="0" Content="Footer Text:" FontSize="13" Margin="2"/>
+            <TextBox x:Name="FooterTextBox" Grid.Row="5" Grid.Column="1" Height="25" Width="250" VerticalContentAlignment="Center" FontSize="13" Margin="2" Controls:TextBoxHelper.Watermark="Enter Footer Text (Optional)" Controls:TextBoxHelper.ClearTextButton="True"/>
+        </Grid>
+    </Grid>
+</Controls:MetroWindow>

@@ -1,0 +1,311 @@
+﻿<Controls:MetroWindow x:Class="EmployeeManagementSystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmployeeManagementSystem"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:p="clr-namespace:EmployeeManagementSystem.Properties"        
+        mc:Ignorable="d" ContentRendered="Window_ContentRendered"
+        GlowBrush="{DynamicResource AccentColorBrush}"
+        WindowStartupLocation="CenterScreen"                      
+        Title="EMS Home" Height="600" Width="850" ResizeMode="NoResize">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Grid.Column="0" Source="/Assets/logo.png" Margin="5" Height="60"/>
+            <TextBlock Grid.Column="1" Margin="5" Text="Employee Management System"
+                       FontSize="25" TextAlignment="Justify" VerticalAlignment="Center"
+                        FontWeight="DemiBold" Foreground="#ffd03438"/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.Background>
+                <ImageBrush ImageSource="/Assets/middlewp.jpg" Stretch="UniformToFill" Opacity="0.3"/>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Margin="5" Background="White" Opacity="0.80">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0" Content="Your Public IP :" FontSize="21" FontWeight="Bold" Foreground="#ffd03438"/>
+                <Border Grid.Column="1" BorderBrush="DodgerBlue" BorderThickness="2">
+                    <TextBlock x:Name="PublicIPTextBlock" HorizontalAlignment="Stretch" FontSize="21" FontWeight="DemiBold" TextAlignment="Center" Margin="2" Height="30" MouseDown="PublicIPTextBlock_MouseDown"/>                    
+                </Border>
+
+                <StackPanel Visibility="Collapsed">
+                    <TextBlock x:Name="PortStringTextBlock" Text=",1433"/>
+                    <TextBlock x:Name="DataBaseStringTextBlock" Text="emsdatabase"/>
+                    <TextBlock x:Name="IntegratedSecurityStringTextBlock" Text="True"/>
+                    <TextBlock x:Name="InstanceStringTextBlock" Text="False"/>
+                    <TextBlock x:Name="UserStringTextBlock" Text="admin"/>
+                    <TextBlock x:Name="PasswordStringTextBlock" Text="1011535"/>
+                </StackPanel>
+
+                <Label Grid.Column="2" Content="Enter IP :" FontSize="21" FontWeight="Bold" Foreground="#ffd03438"/>
+                <TextBox x:Name="EnterIPTextBox" Grid.Column="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="DodgerBlue" BorderThickness="2" FontSize="21" FontWeight="DemiBold" Height="38" VerticalAlignment="Top" Text="{Binding Source={x:Static p:Settings.Default}, Path=IP, Mode=TwoWay}"/>
+            </Grid>
+
+            <TextBlock Grid.Row="1"
+                       x:Name="WaitTextBlock"
+                       Visibility="Collapsed"
+                       TextAlignment="Center"
+                       Text="Wait..."
+                       FontSize="25"
+                       FontWeight="DemiBold"
+                       Foreground="#ffd03438"
+                       HorizontalAlignment="Center"                     
+                       VerticalAlignment="Top"                    
+                       Margin="5"/>
+
+            <StackPanel Grid.Row="1" Orientation="Horizontal" Background="White" Opacity="0.85" VerticalAlignment="Bottom">
+                <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE192;" FontSize="75" Foreground="#FF006BB3" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="70,5"/>
+                <TextBlock Text="Enter Your Credential" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="50,0" Foreground="#ffd03438"/>
+            </StackPanel>
+
+            <Border x:Name="LoginBorder" Grid.Row="2" BorderBrush="#FF006BB3" BorderThickness="5" CornerRadius="6" Height="250" Width="500">
+                <Border.Background>
+                    <SolidColorBrush Color="White" Opacity="0.9"/>
+                </Border.Background>
+                <Border BorderBrush="#FF006BB3" BorderThickness="2" Margin="5" CornerRadius="2">
+                    <Grid Background="#FF006BB3">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock x:Name="UserNameTextBlock" 
+                                       Grid.Row="0"                                   
+                                       Grid.Column="0"                                   
+                                       Text="User Name :"                                   
+                                       VerticalAlignment="Center"                                   
+                                       HorizontalAlignment="Left"                                   
+                                       Margin="5"                                   
+                                       FontSize="18"                                   
+                                       Foreground="White"/>
+
+                            <ComboBox x:Name="UserNameComboBox" 
+                                      Grid.Row="0"                                 
+                                      Grid.Column="1"
+                                      Controls:TextBoxHelper.Watermark="Select User"
+                                      VerticalAlignment="Stretch"                                 
+                                      HorizontalAlignment="Stretch"
+                                      VerticalContentAlignment="Center"
+                                     FontSize="18"                                 
+                                     Margin="5">
+                                <ComboBoxItem Content="Admin"/>
+                                <ComboBoxItem Content="Client"/>
+                            </ComboBox>
+
+                            <TextBlock x:Name="PasswordTextBlock" 
+                                       Grid.Row="1"                                   
+                                       Grid.Column="0"                                   
+                                       Text="Password :"                                   
+                                       VerticalAlignment="Center"                                   
+                                       HorizontalAlignment="Left"                                   
+                                       Margin="5"                                   
+                                       FontSize="18"                                   
+                                       Foreground="White"/>
+
+                            <PasswordBox x:Name="LoginPasswordBox" 
+                                         Grid.Row="1"                                     
+                                         Grid.Column="1"  
+                                         Controls:TextBoxHelper.Watermark="Password is case sensitive"
+                                         VerticalAlignment="Stretch"                                     
+                                         HorizontalAlignment="Stretch"                                     
+                                         FontSize="18"
+                                         VerticalContentAlignment="Center"
+                                         Margin="5"/>
+                        </Grid>
+
+                        <Border BorderBrush="White" Grid.Row="2"
+                                Width="150" Height="40"
+                                BorderThickness="1" CornerRadius="5">
+                            <Button x:Name="LoginButton" 
+                                    Style="{DynamicResource LoginButtonStyle}"
+                                    FontSize="18"                                
+                                    BorderBrush="White"                                
+                                    Cursor="Hand"                                
+                                    Background="White"                                
+                                    HorizontalAlignment="Stretch"                                
+                                    VerticalAlignment="Stretch"                                
+                                    Content="Login"                                
+                                    Click="LoginButton_Click"/>
+                        </Border>
+
+                        <TextBlock x:Name="ChangePwTextBlock" 
+                                   Grid.Row="1" 
+                                   Text="Change Admin Password"
+                                   Cursor="Hand"
+                                   Foreground="White"
+                                   FontSize="12"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Bottom"
+                                   Margin="5"
+                                   MouseDown="ChangePwTextBlock_MouseDown"/>
+                    </Grid>
+                </Border>
+            </Border>
+
+            <Border x:Name="ChangePasswordBorder" Grid.Row="2" BorderBrush="#FF006BB3" BorderThickness="5" CornerRadius="6" Height="250" Width="500" Visibility="Collapsed">
+                <Border.Background>
+                    <SolidColorBrush Color="White" Opacity="0.9"/>
+                </Border.Background>
+                <Border BorderBrush="#FF006BB3" BorderThickness="2" Margin="5" CornerRadius="2">
+                    <Grid Background="#FF006BB3">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock x:Name="OldPasswordTextBlock" 
+                                       Grid.Row="0"                                   
+                                       Grid.Column="0"                                   
+                                       Text="Old Password :"                                   
+                                       VerticalAlignment="Center"                                   
+                                       HorizontalAlignment="Left"                                   
+                                       Margin="5"                                   
+                                       FontSize="18"                                   
+                                       Foreground="White"/>
+
+                            <PasswordBox x:Name="OldPasswordBox" 
+                                         Grid.Row="0"                                     
+                                         Grid.Column="1"
+                                         VerticalAlignment="Stretch"                                     
+                                         HorizontalAlignment="Stretch"  
+                                         VerticalContentAlignment="Center"
+                                         Controls:TextBoxHelper.Watermark="Password is case sensitive"
+                                         FontSize="10"
+                                         Margin="5"/>
+
+                            <TextBlock x:Name="NewPasswordTextBlock" 
+                                       Grid.Row="1"                                   
+                                       Grid.Column="0"                                   
+                                       Text="New Password :"                                   
+                                       VerticalAlignment="Center"                                   
+                                       HorizontalAlignment="Left"                                   
+                                       Margin="5"                                   
+                                       FontSize="18"                                   
+                                       Foreground="White"/>
+
+                            <PasswordBox x:Name="NewPasswordBox" 
+                                         Grid.Row="1"                                     
+                                         Grid.Column="1"
+                                         VerticalAlignment="Center"                                     
+                                         HorizontalAlignment="Stretch"
+                                         VerticalContentAlignment="Center"
+                                         Controls:TextBoxHelper.Watermark="Password is case sensitive"
+                                         FontSize="10"
+                                         Margin="5"/>
+
+                            <TextBlock x:Name="RetypePasswordTextBlock" 
+                                       Grid.Row="2"                                   
+                                       Grid.Column="0"                                   
+                                       Text="Confirm Password :"                                   
+                                       VerticalAlignment="Center"                                   
+                                       HorizontalAlignment="Left"                                   
+                                       Margin="5"                                   
+                                       FontSize="18"                                   
+                                       Foreground="White"/>
+
+                            <PasswordBox x:Name="RetypePasswordBox" 
+                                         Grid.Row="2"                                     
+                                         Grid.Column="1"                                     
+                                         VerticalAlignment="Stretch"                                     
+                                         HorizontalAlignment="Stretch"
+                                         VerticalContentAlignment="Center"
+                                         Controls:TextBoxHelper.Watermark="Password is case sensitive"
+                                         FontSize="10"
+                                         Margin="5"/>
+                        </Grid>
+
+                        <Border BorderBrush="White" Grid.Row="2"
+                                Width="150" Height="40"
+                                BorderThickness="1" CornerRadius="5">
+                            <Button x:Name="OkayButton"
+                                    Style="{DynamicResource LoginButtonStyle}"                                
+                                    FontSize="18"                                
+                                    BorderBrush="White"                                
+                                    Cursor="Hand"
+                                    Background="White"                                
+                                    HorizontalAlignment="Stretch"                                
+                                    VerticalAlignment="Stretch"                                
+                                    Content="Okay"                                
+                                    Click="OkayButton_Click"/>
+                        </Border>
+
+                        <TextBlock x:Name="CancelPwTextBlock" 
+                                   Grid.Row="1" 
+                                   Text="Cancel"
+                                   Foreground="White"
+                                   Cursor="Hand"
+                                   FontSize="12"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Bottom"
+                                   Margin="5"
+                                   MouseDown="CancelPwTextBlock_MouseDown"/>
+                    </Grid>
+                </Border>
+            </Border>
+        </Grid>
+
+
+
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Developed by Shubham © 2018" HorizontalAlignment="Right" VerticalAlignment="Center"
+                       FontSize="15" Foreground="#ffd03438" Margin="10,0"/>
+            <TextBlock x:Name="AboutDevButton" Grid.Column="1" FontFamily="Segoe MDL2 Assets" Margin="5"
+                       Text="&#xE783;" FontSize="25" Foreground="#ffd03438"
+                       MouseDown="AboutDevButton_MouseDown" Cursor="Hand"/>
+        </Grid>
+    </Grid>
+</Controls:MetroWindow>

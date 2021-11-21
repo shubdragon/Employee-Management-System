@@ -1,0 +1,1140 @@
+﻿<Controls:MetroWindow x:Class="EmployeeManagementSystem.Windows.DataMgmtWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmployeeManagementSystem.Windows"
+        xmlns:CSlocal="clr-namespace:EmployeeManagementSystem"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"                      
+        xmlns:ewt="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        mc:Ignorable="d" x:Name="Mathematics"
+        Closing="Window_Closing"
+        GlowBrush="{DynamicResource AccentColorBrush}"
+        Title="Employee Data" Height="680" Width="1024" WindowState="Maximized">
+    <Window.Resources>
+        <CSlocal:TotalConverter x:Key="TotalConverter"/>
+        <BooleanToVisibilityConverter x:Key="BoolToVisibility" />
+    </Window.Resources>
+
+    <!--#region Background-->
+    <Window.Background>
+        <ImageBrush ImageSource="/Assets/background.jpg" />
+    </Window.Background>
+    <!--#endregion-->
+
+    <!--#region TitleBar-->
+    <Controls:MetroWindow.RightWindowCommands>
+        <Controls:WindowCommands>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="EstNameTextBox" Height="18" Width="Auto" Background="Transparent" FontWeight="DemiBold" BorderThickness="0" Foreground="#FFD1E8F1" TextAlignment="Right" Controls:TextBoxHelper.Watermark="Enter Establishment name"/>
+                <Button x:Name="HeaderEstNameUpdate" Cursor="Hand" Click="HeaderEstNameUpdate_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Width="20" Height="20" Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
+                            <Rectangle.OpacityMask>
+                                <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_disk_upload}" />
+                            </Rectangle.OpacityMask>
+                        </Rectangle>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+            
+            <Button x:Name="HeaderRefreshButton" Cursor="Hand" Click="HeaderRefreshButton_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="20"
+                   Height="20"
+                   Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
+                        <Rectangle.OpacityMask>
+                            <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_refresh_clockwise_down}" />
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
+                    <TextBlock Margin="4,0,0,0"
+                   VerticalAlignment="Center"
+                   Text="Refresh" />
+                </StackPanel>
+            </Button>
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.RightWindowCommands>
+    <!--#endregion-->
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--#region Top-->        
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Grid.Column="0" Grid.Row="0" Source="/Assets/logo.png" Margin="5" Height="50"/>
+            <TextBlock Grid.Column="1" Grid.Row="0" Margin="5" Text="Employee Data"
+                       FontSize="20" TextAlignment="Justify" VerticalAlignment="Center"
+                       FontWeight="DemiBold" Foreground="#ffd03438"/>
+
+            <StackPanel x:Name="LogoutButton" Grid.Column="2" Grid.Row="0" Cursor="Hand" Margin="5" MouseDown="LogoutButton_MouseDown">
+                <TextBlock FontFamily="Segoe MDL2 Assets"                       
+                           Text="&#xE7E8;" 
+                           FontSize="25" 
+                           Foreground="#ffd03438"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Top"          
+                           Cursor="Hand" />
+                <TextBlock FontSize="15" Foreground="#ffd03438" Text="Logout" VerticalAlignment="Top" />
+            </StackPanel>
+
+            <Border Grid.Row="1" Grid.ColumnSpan="3" BorderBrush="DarkGray" BorderThickness="0.5"/>
+        </Grid>        
+        <!--#endregion-->
+        
+        <Grid Grid.Row="1">
+            <Controls:MetroAnimatedTabControl>
+                <!--#region Tab1-->
+                <Controls:MetroTabItem Cursor="Hand">
+                    <TabItem.Header>
+                        <DockPanel LastChildFill="True">
+                            <Rectangle DockPanel.Dock="Left" Margin="0,0,5,0" Width="20" Height="20" Fill="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}, Path=(TextElement.Foreground)}">
+                                <Rectangle.OpacityMask>
+                                    <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_draw_marker}" />
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                            <Label Padding="0" Foreground="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}, Path=(TextElement.Foreground)}" FontSize="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}, Path=(TextElement.FontSize)}">
+                                Main
+                            </Label>
+                        </DockPanel>
+                    </TabItem.Header>
+                    <Grid>
+                        <Grid.Background>
+                            <ImageBrush ImageSource="/Assets/background.jpg" />
+                        </Grid.Background>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <Viewbox Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" MaxHeight="200">
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel Orientation="Vertical">
+                                    <Grid Margin="10">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="2*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Grid.Column="0" Grid.Row="0" Margin="10" Content="Employee Code:" VerticalAlignment="Center" FontSize="13"  Background="White"/>
+                                        <TextBox x:Name="EidTextBox" Grid.Column="1" Grid.Row="0" Controls:TextBoxHelper.ClearTextButton="True" Width="200" Controls:TextBoxHelper.Watermark="Once add can't be edit" Margin="5" HorizontalAlignment="Stretch" MinHeight="20" MaxHeight="25" FontSize="13" PreviewTextInput="EidTextBox_PreviewTextInput"/>
+
+                                        <Label Grid.Column="0" Grid.Row="1" Content="Name:" Margin="10" VerticalAlignment="Center" FontSize="13" Background="White"/>
+                                        <TextBox x:Name="NameTextBox" Grid.Column="1" Grid.Row="1" Margin="5" HorizontalAlignment="Stretch" Width="200" MinHeight="20" MaxHeight="25" FontSize="13" Controls:TextBoxHelper.ClearTextButton="True"/>
+
+                                        <TextBlock Grid.Column="0" Grid.Row="2" Text="Father/Husband Name: " Margin="10" VerticalAlignment="Center" FontSize="13" Background="White"/>
+                                        <TextBox x:Name="FHTextBox" Grid.Column="1" Grid.Row="2" Margin="5" HorizontalAlignment="Stretch" Width="200" MinHeight="20" MaxHeight="25" FontSize="13" Controls:TextBoxHelper.ClearTextButton="True"/>
+
+                                        <Label Grid.Column="0" Grid.Row="3" Margin="10" Content="Gender:" VerticalAlignment="Center" FontSize="13" Background="White"/>
+                                        <ComboBox x:Name="GenderComboBox" Grid.Column="1" Grid.Row="3" Margin="5"  HorizontalAlignment="Stretch" Width="200" MinHeight="20" MaxHeight="25" FontSize="13" Cursor="Hand">
+                                            <ComboBoxItem Content="Male"/>
+                                            <ComboBoxItem Content="Female"/>
+                                            <ComboBoxItem Content="Other"/>
+                                        </ComboBox>
+
+                                    </Grid>
+                                </StackPanel>
+
+                                <Viewbox>
+                                    <StackPanel Orientation="Vertical">
+                                        <Grid Margin="5">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                            </Grid.RowDefinitions>
+
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="2*"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <Label Grid.Column="0" Grid.Row="0" Margin="5,10" Content="ESIC IP No.:" VerticalAlignment="Center" FontSize="13" Background="White"/>
+                                            <TextBox x:Name="EsicTextBox" Grid.Column="1" Grid.Row="0" Margin="5" HorizontalAlignment="Stretch" Width="200" MinHeight="20" MaxHeight="25" FontSize="13" Controls:TextBoxHelper.ClearTextButton="True" PreviewTextInput="EidTextBox_PreviewTextInput"/>
+
+                                            <Label Grid.Column="0" Grid.Row="1" Margin="5,10" Content="Mobile No.:" VerticalAlignment="Center" FontSize="13" Background="White"/>
+                                            <TextBox x:Name="MobileTextBox" Grid.Column="1" Grid.Row="1" Margin="5" HorizontalAlignment="Stretch" Width="200" MinHeight="20" MaxHeight="25" FontSize="13" Controls:TextBoxHelper.Watermark="10 digit mobile no." MaxLength="10" Controls:TextBoxHelper.ClearTextButton="True" PreviewTextInput="EidTextBox_PreviewTextInput"/>
+
+                                            <Label Grid.Column="0" Grid.Row="2" Margin="5,10" Content="Aadhaar No.: " VerticalAlignment="Center" FontSize="13" Background="White"/>
+                                            <ewt:MaskedTextBox x:Name="AadhaarTextBox" Grid.Column="1" Grid.Row="2" MaxLength="14" Margin="5" HorizontalAlignment="Stretch" Width="200" MinHeight="20" MaxHeight="25" FontSize="13" Mask="0000-0000-0000"/>
+
+                                            <Label Grid.Column="0" Grid.Row="3" Content="UAN No.:" Margin="5,10" VerticalAlignment="Center" FontSize="13" Background="White"/>
+                                            <TextBox x:Name="UanTextBox" Grid.Column="1" Grid.Row="3" Margin="5" HorizontalAlignment="Stretch" Width="200" MinHeight="20" MaxHeight="25" FontSize="13" Controls:TextBoxHelper.ClearTextButton="True" PreviewTextInput="EidTextBox_PreviewTextInput"/>
+                                        </Grid>
+                                    </StackPanel>
+                                </Viewbox>
+
+                                <StackPanel Orientation="Vertical">
+                                    <Grid Margin="2">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="2*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Grid.Column="0" Grid.Row="0" Margin="10" Content="Email:" VerticalAlignment="Center" FontSize="13" Background="White"/>
+                                        <TextBox x:Name="EmailTextBox" Grid.Column="1" Grid.Row="0" Controls:TextBoxHelper.Watermark="someone@email.com" Controls:TextBoxHelper.ClearTextButton="True" Margin="5" HorizontalAlignment="Stretch" Width="200" MinHeight="20" MaxHeight="25" FontSize="13" />
+
+                                        <Label Grid.Column="0" Grid.Row="1" Margin="10" Content="Date Of Joining:" VerticalAlignment="Center" FontSize="13" Background="White"/>
+                                        <ewt:MaskedTextBox x:Name="DojTextBox" Grid.Column="1" Grid.Row="1" Margin="5" HorizontalAlignment="Stretch" Width="200" MinHeight="20" MaxHeight="25" FontSize="13" Mask="00-00-0000" ToolTipService.InitialShowDelay="200" ToolTipService.ShowDuration="3000" ToolTipService.BetweenShowDelay="10000" ToolTip="dd-mm-yyyy"/>
+
+                                        <Label Grid.Column="0" Grid.Row="2" Margin="10" Content="Date Of Leaving: " VerticalAlignment="Center" FontSize="13" Background="White"/>
+                                        <ewt:MaskedTextBox x:Name="DolTextBox" Grid.Column="1" Grid.Row="2" Margin="5" HorizontalAlignment="Stretch" Width="200" MinHeight="20" MaxHeight="25" FontSize="13" Mask="00-00-0000" ToolTipService.InitialShowDelay="200" ToolTipService.ShowDuration="3000" ToolTipService.BetweenShowDelay="10000" ToolTip="dd-mm-yyyy"/>
+
+                                        <Label Grid.Column="0" Grid.Row="3" Margin="10" Content="Date Of Birth:" VerticalAlignment="Center" FontSize="13" Background="White"/>
+                                        <ewt:MaskedTextBox x:Name="DobTextBox" Grid.Column="1" Grid.Row="3" Margin="5" HorizontalAlignment="Stretch" Width="200" MinHeight="20" MaxHeight="25" FontSize="13" Mask="00-00-0000" ToolTipService.InitialShowDelay="200" ToolTipService.ShowDuration="3000" ToolTipService.BetweenShowDelay="10000" ToolTip="dd-mm-yyyy"/>
+                                    </Grid>
+                                </StackPanel>
+
+                                <WindowsFormsHost Height="140" Width="120" Visibility="Hidden">
+                                    <wf:PictureBox x:Name="ResizerEmpPictureBox" SizeMode="Zoom" x:FieldModifier="public"/>
+                                </WindowsFormsHost>
+                            </StackPanel>
+                        </Viewbox>
+
+                        <Grid Grid.Row="1" VerticalAlignment="Top">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Viewbox Grid.Column="0" Margin="0,0,5,0" MaxHeight="160" VerticalAlignment="Top" HorizontalAlignment="Left">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Column="0" Grid.Row="0" Content="Relation:" Margin="0,10" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="13" Width="65" Background="White"/>
+                                    <ComboBox x:Name="RelationComboBox" Grid.Column="1" Grid.Row="0" Margin="0,10" Width="200" MinHeight="20" MaxHeight="25" FontSize="13" Cursor="Hand">
+                                        <ComboBoxItem Content="Father"/>
+                                        <ComboBoxItem Content="Spouse"/>
+                                    </ComboBox>
+
+                                    <Label Grid.Column="2" Grid.Row="0" Content="IFSC:" Margin="0,10" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="13" Width="65" Background="White"/>
+                                    <TextBox x:Name="IFSCTextBox" Grid.Column="3" Grid.Row="0" Margin="0,10" HorizontalAlignment="Stretch" Width="200" MinHeight="20" MaxHeight="25" FontSize="13"/>
+
+                                    <Label Grid.Column="4" Grid.Row="0" Content="A/c no.:" Margin="0,10" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="13" Width="65" Background="White"/>
+                                    <TextBox x:Name="AcTextBox" Grid.Column="5" Grid.Row="0" MinWidth="275"  MaxWidth="445" MinHeight="20" MaxHeight="25" FontSize="13" Controls:TextBoxHelper.Watermark="Account no. can be of maximum 19 digits" Controls:TextBoxHelper.ClearTextButton="True" PreviewTextInput="EidTextBox_PreviewTextInput"/>
+
+                                    <!-- Column 0 , Column 1 Available -->
+
+                                    <Label Grid.Column="0" Grid.Row="1" Content="Role:" Margin="0,15" VerticalAlignment="Center" FontSize="13" Background="White"/>
+                                    <TextBox x:Name="RoleTextBox" Grid.Column="1" Grid.Row="1" Margin="0,15" HorizontalAlignment="Stretch" Width="200" MinHeight="20" MaxHeight="25" FontSize="13"/>
+
+
+                                    <Label Grid.Column="2" Grid.Row="1" Margin="10,10" Content="Address:" VerticalAlignment="Center" FontSize="13" Background="White" HorizontalAlignment="Right"/>
+                                    <TextBox x:Name="AddressTextBox" Grid.Column="3" Grid.ColumnSpan="5" Grid.Row="1" Grid.RowSpan="2" Margin="10,10" HorizontalAlignment="Left" Width="455" Height="80" FontSize="13" TextWrapping="Wrap"/>
+
+                                    <Label Grid.Column="0" Grid.Row="2" Margin="10" Content="Search:" Foreground="DodgerBlue" FontWeight="DemiBold" VerticalAlignment="Center" FontSize="13" Background="White"/>
+                                    <TextBox x:Name="SearchTextBox" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalContentAlignment="Center" BorderBrush="DodgerBlue" BorderThickness="2" Height="25" Width="280" FontWeight="DemiBold" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Type Employee Name" TextChanged="SearchTextBox_TextChanged"/>
+                                </Grid>
+                            </Viewbox>
+
+                            <Viewbox Grid.Column="1" MaxHeight="160" Margin="5,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Center">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Border Grid.Row="0" BorderThickness="1" BorderBrush="Black">
+                                        <!-- <Image x:Name="EmpImage"  Height="120" Width="100" Stretch="Uniform" Cursor="Hand"/> -->
+                                        <WindowsFormsHost Height="120" Width="100">
+                                            <wf:PictureBox x:Name="EmpPictureBox" SizeMode="Zoom" x:FieldModifier="public"/>
+                                        </WindowsFormsHost>
+                                    </Border>
+
+                                    <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Border Height="30" Width="32" Margin="1" CornerRadius="2" BorderBrush="CornflowerBlue" BorderThickness="1" HorizontalAlignment="Center">
+                                            <Button x:Name="BrowseButton" Cursor="Hand" IsEnabled="False" FontFamily="Segoe MDL2 Assets" Content="&#xE898;" FontSize="20" Style="{StaticResource UploadButtonStyle}" Click="BrowseButton_Click"/>
+                                        </Border>
+                                        <Border Height="30" Width="32" Margin="1" CornerRadius="2" BorderBrush="IndianRed" BorderThickness="1" HorizontalAlignment="Center">
+                                            <Button x:Name="RemoveButton" Cursor="Hand" IsEnabled="False" FontFamily="Segoe MDL2 Assets" Content="&#xE107;" FontSize="20" Style="{StaticResource DeleteButtonStyle}" Click="RemoveButton_Click"/>
+                                        </Border>
+                                        <Border Height="30" Width="32" Margin="1" CornerRadius="2" BorderBrush="Green" BorderThickness="1" HorizontalAlignment="Center">
+                                            <Button x:Name="DownloadButton" Cursor="Hand" FontFamily="Segoe MDL2 Assets" Content="&#xE896;" FontSize="20" Style="{StaticResource DownloadButtonStyle}" Click="DownloadButton_Click"/>
+                                        </Border>
+                                    </StackPanel>
+
+                                    <TextBlock x:Name="ImagePathTextBlock" Visibility="Collapsed"/>
+                                </Grid>
+                            </Viewbox>
+                        </Grid>
+
+                        <!-- Template and Picture -->
+                        <Grid  Grid.Row="0" Margin="2" HorizontalAlignment="Right" VerticalAlignment="Top">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Button x:Name="TemplateButton" Grid.Row="0" Background="#FF2077B2" Cursor="Hand" Height="80" Width="80" BorderBrush="#FF04558B" Style="{DynamicResource MetroCircleButtonStyle}" Click="TempleteButton_Click">
+                                <StackPanel>
+                                    <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xF581;" Foreground="White" FontSize="18" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                                    <TextBlock Text="Template"  FontSize="12" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+
+                            <Button x:Name="TemplateHelpButton" Grid.Row="1" Background="#FF2077B2" Cursor="Hand" Height="50" Width="50" FontFamily="Segoe MDL2 Assets" Content="&#xF142;" Foreground="White" FontSize="18" VerticalAlignment="Top" HorizontalAlignment="Center" BorderBrush="#FF04558B" Style="{DynamicResource MetroCircleButtonStyle}" Click="TemplateHelpButton_Click"/>
+                        </Grid>
+
+                        <!-- Picture Box Was Here-->
+
+                        <Border x:Name="CameraBorder" Grid.Row="1" BorderBrush="#FF51A4EE" BorderThickness="2" CornerRadius="5" HorizontalAlignment="Center" VerticalAlignment="Stretch" Visibility="Collapsed">
+                            <Grid Width="250" Background="AliceBlue">
+                                <TextBlock x:Name="CameraCloseTextBlock" Text="X" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="18" FontWeight="ExtraBold" Foreground="Red" Margin="2" MouseDown="CameraCloseTextBlock_MouseDown"/>
+                                <TextBlock Text="Image Upload Dialog" FontSize="18" FontWeight="Bold" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                                <TextBlock Text="Choose image source" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                <Button x:Name="BrowseImageButton" Height="25" Width="80" VerticalAlignment="Bottom" HorizontalAlignment="Left" Content="Browse" Margin="5" Cursor="Hand" Click="BrowseImageButton_Click"/>
+                                <Button x:Name="CameraButton" Height="25" Width="80" VerticalAlignment="Bottom" HorizontalAlignment="Right" Content="Camera" Margin="5" Cursor="Hand" Click="CameraButton_Click"/>
+                            </Grid>
+                        </Border>
+
+
+                        <Viewbox Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Left" MaxHeight="45">
+                            <StackPanel  Orientation="Horizontal">
+                                <Border BorderThickness="1" BorderBrush="#FF04558B" CornerRadius="2"  Width="100" Height="35" Margin="5">
+                                    <Button x:Name="AddButton" Cursor="Hand" Content="Add" FontSize="15" Style="{StaticResource ButtonsButtonStyle}" Click="AddButton_Click"/>
+                                </Border>
+                                <Border BorderThickness="1" BorderBrush="#FF04558B" CornerRadius="2"  Width="100" Height="35" Margin="5">
+                                    <Button x:Name="SaveButton" Cursor="Hand" Content="Save" FontSize="15" IsEnabled="False" Style="{StaticResource ButtonsButtonStyle}" Click="SaveButton_Click"/>
+                                </Border>
+                                <Border BorderThickness="1" BorderBrush="#FF04558B" CornerRadius="2"  Width="100" Height="35" Margin="5">
+                                    <Button x:Name="EditButton" Cursor="Hand" Content="Edit" FontSize="15" Style="{StaticResource ButtonsButtonStyle}" Click="EditButton_Click"/>
+                                </Border>
+                                <Border BorderThickness="1" BorderBrush="#FF04558B" CornerRadius="2"  Width="100" Height="35" Margin="5">
+                                    <Button x:Name="UpdateButton" Cursor="Hand" Content="Update" FontSize="15" IsEnabled="False" Style="{StaticResource ButtonsButtonStyle}" Click="UpdateButton_Click"/>
+                                </Border>
+                                <Border BorderThickness="1" BorderBrush="#FF04558B" CornerRadius="2"  Width="100" Height="35" Margin="5">
+                                    <Button x:Name="DeleteButton" Cursor="Hand" Content="Delete" FontSize="15" Style="{StaticResource ButtonsButtonStyle}" Click="DeleteButton_Click"/>
+                                </Border>
+                                <Border BorderThickness="1" BorderBrush="#FF04558B" CornerRadius="2"  Width="100" Height="35" Margin="5">
+                                    <Button x:Name="PrevButton" Cursor="Hand" Content="Prev" FontSize="15" Style="{StaticResource ButtonsButtonStyle}" Click="PrevButton_Click"/>
+                                </Border>
+                                <Border BorderThickness="1" BorderBrush="#FF04558B" CornerRadius="2"  Width="100" Height="35" Margin="5">
+                                    <Button x:Name="NextButton" Cursor="Hand" Content="Next" FontSize="15" Style="{StaticResource ButtonsButtonStyle}" Click="NextButton_Click"/>
+                                </Border>
+                                <Border BorderThickness="1" BorderBrush="#FF04558B" CornerRadius="2"  Width="100" Height="35" Margin="5">
+                                    <Button x:Name="PrintButton" Cursor="Hand" Content="Print" FontSize="15" Style="{StaticResource ButtonsButtonStyle}" Click="PrintButton_Click"/>
+                                </Border>
+                                <Border BorderThickness="1" BorderBrush="#FF04558B" CornerRadius="2"  Width="100" Height="35" Margin="5">
+                                    <Button x:Name="ExportDataButton" Cursor="Hand" Content="Export Data" FontSize="15" Style="{StaticResource ButtonsButtonStyle}" Click="ExportDataButton_Click"/>
+                                </Border>
+                                <Border BorderThickness="1" BorderBrush="#FF04558B" CornerRadius="2"  Width="100" Height="35" Margin="5">
+                                    <Button x:Name="ImportDataButton" Cursor="Hand" Content="Import Data" FontSize="15" Style="{StaticResource ButtonsButtonStyle}" Click="ImportDataButton_Click"/>
+                                </Border>
+                            </StackPanel>
+                        </Viewbox>
+
+
+                        <!--
+        <WindowsFormsHost Grid.Row="4">
+            <wf:DataGridView x:Name="TableDataGrids" AutoGenerateColumns="True" CellContentClick="TableDataGrid_CellContentClick"/>
+        </WindowsFormsHost>
+        -->
+
+
+                        <DataGrid x:Name="TableDataGrid" Grid.Row="3" AutoGenerateColumns="True" Style="{StaticResource AzureDataGrid}" SelectionChanged="TableDataGrid_SelectionChanged" />
+
+                        <!--
+                        <WindowsFormsHost Grid.Row="3" Visibility="Collapsed">
+                            <wf:DataGridView x:Name="dgv" ColumnHeadersHeightSizeMode="AutoSize" />
+                        </WindowsFormsHost>                        
+                        -->
+                    </Grid>
+                </Controls:MetroTabItem>
+                <!--#endregion-->
+
+                <!--#region Tab2-->
+                <Controls:MetroTabItem Cursor="Hand">
+                    <TabItem.Header>
+                        <DockPanel LastChildFill="True">
+                            <Rectangle DockPanel.Dock="Left" Margin="0,0,5,0" Width="20" Height="20" Fill="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}, Path=(TextElement.Foreground)}">
+                                <Rectangle.OpacityMask>
+                                    <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_calendar_dollar}" />
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                            <Label Padding="0" Foreground="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}, Path=(TextElement.Foreground)}" FontSize="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}, Path=(TextElement.FontSize)}">
+                                Salary Management
+                            </Label>
+                        </DockPanel>
+                    </TabItem.Header>
+                    <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                        <Grid>
+                            <Grid.Background>
+                                <ImageBrush ImageSource="/Assets/background.jpg" />
+                            </Grid.Background>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>                            
+
+                            <Border Grid.Row="0" Background="#FF2BA8A8" Height="25" Width="300" CornerRadius="15" Margin="5" HorizontalAlignment="Left">
+                                <TextBlock Text="Select Employee" Foreground="White" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+
+                            <Grid Grid.Row="1" Margin="5">                                
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Grid.Column="0" Content="Employee Code:" FontWeight="Medium" FontSize="15" Margin="10" VerticalContentAlignment="Center"/>
+                                <TextBox x:Name="EidSelectTextBox" Grid.Column="1" Margin="10" Height="25" Width="50" FontSize="15" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" PreviewTextInput="GlobalTextBox_PreviewTextInput"/>
+                                <Button x:Name="Tab2GoButton" Grid.Column="2" Width="50" Height="28" Margin="10" Content="Go" FontSize="10" Click="Tab2GoButton_Click"/>
+
+                                <Label Grid.Column="3" Content="Date:" FontWeight="Medium" FontSize="15" Margin="10" VerticalContentAlignment="Center"/>                                
+                                <DatePicker x:Name="Tab2DatePicker" Grid.Column="4" Margin="10" FontSize="14" Visibility="Collapsed"/>
+
+                                <Label x:Name="x" Grid.Column="5" Content="Date:" FontWeight="Medium" Visibility="Collapsed" FontSize="15" Margin="25,0" VerticalContentAlignment="Center"/>
+                                <StackPanel Grid.Column="6" Orientation="Horizontal" Margin="0,10">                                    
+                                    <ComboBox x:Name="Tab2MonthComboBox" Controls:TextBoxHelper.Watermark="Month" FontSize="14" Margin="2" DropDownClosed="Tab2MonthComboBox_DropDownClosed">
+                                        <ComboBoxItem Content="01"/>
+                                        <ComboBoxItem Content="02"/>
+                                        <ComboBoxItem Content="03"/>
+                                        <ComboBoxItem Content="04"/>
+                                        <ComboBoxItem Content="05"/>
+                                        <ComboBoxItem Content="06"/>
+                                        <ComboBoxItem Content="07"/>
+                                        <ComboBoxItem Content="08"/>
+                                        <ComboBoxItem Content="09"/>
+                                        <ComboBoxItem Content="10"/>
+                                        <ComboBoxItem Content="11"/>
+                                        <ComboBoxItem Content="12"/>
+                                    </ComboBox>
+
+                                    <ComboBox x:Name="Tab2YearComboBox" Controls:TextBoxHelper.Watermark="Year" FontSize="14" Margin="2" DropDownClosed="Tab2YearComboBox_DropDownClosed"/>
+                                </StackPanel>
+                                
+                                <Border Grid.Column="0" Grid.ColumnSpan="12" VerticalAlignment="Bottom" BorderThickness="1" BorderBrush="#FF0B3232"/>
+
+                                <Button x:Name="Tab2CancelButton" Grid.Column="7" HorizontalAlignment="Right" Background="#FF2BA8A8" Cursor="Hand" Height="50" Width="50" BorderBrush="#FF04558B" Style="{DynamicResource MetroCircleButtonStyle}" ToolTipService.InitialShowDelay="500" ToolTipService.ShowDuration="3000" ToolTipService.BetweenShowDelay="10000" ToolTip="Cancel" Visibility="Collapsed" Click="Tab2CancelButton_Click">
+                                    <Rectangle Width="20" Height="20" Fill="White">
+                                        <Rectangle.OpacityMask>
+                                            <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_stop}" />
+                                        </Rectangle.OpacityMask>
+                                    </Rectangle>
+                                </Button>
+                                
+                                <Button x:Name="Tab2AddButton" Grid.Column="8" HorizontalAlignment="Right" Background="#FF2BA8A8" Cursor="Hand" Height="50" Width="50" BorderBrush="#FF04558B" Style="{DynamicResource MetroCircleButtonStyle}" ToolTipService.InitialShowDelay="500" ToolTipService.ShowDuration="3000" ToolTipService.BetweenShowDelay="10000" ToolTip="Add New" Click="Tab2AddButton_Click">
+                                    <Rectangle Width="20" Height="20" Fill="White">
+                                        <Rectangle.OpacityMask>
+                                            <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_user_add}" />
+                                        </Rectangle.OpacityMask>
+                                    </Rectangle>
+                                </Button>
+
+                                <Button x:Name="Tab2EditViewButton" Grid.Column="9" HorizontalAlignment="Right" Background="#FF2BA8A8" Cursor="Hand" Height="50" Width="50" BorderBrush="#FF04558B" Style="{DynamicResource MetroCircleButtonStyle}" ToolTipService.InitialShowDelay="500" ToolTipService.ShowDuration="3000" ToolTipService.BetweenShowDelay="10000" ToolTip="View/Edit" Click="Tab2EditViewButton_Click">
+                                    <Rectangle Width="20" Height="20" Fill="White">
+                                        <Rectangle.OpacityMask>
+                                            <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_page_edit}" />
+                                        </Rectangle.OpacityMask>
+                                    </Rectangle>
+                                </Button>
+
+                                <Button x:Name="Tab2SaveButton" Grid.Column="10" HorizontalAlignment="Right" Background="#FF2BA8A8" Cursor="Hand" Height="50" Width="50" BorderBrush="#FF04558B" Style="{DynamicResource MetroCircleButtonStyle}" ToolTipService.InitialShowDelay="500" ToolTipService.ShowDuration="3000" ToolTipService.BetweenShowDelay="10000" ToolTip="Save" Visibility="Collapsed" Click="Tab2SaveButton_Click">
+                                    <Button.Content>
+                                        <TextBlock Foreground="White" FontFamily="Segoe MDL2 Assets" FontSize="18" Text="&#xE105;"/>
+                                    </Button.Content>
+                                </Button>
+
+                                <Button x:Name="Tab2DeleteButton" Grid.Column="11" HorizontalAlignment="Right" Background="#FF2BA8A8" Cursor="Hand" Height="50" Width="50" BorderBrush="#FF04558B" Style="{DynamicResource MetroCircleButtonStyle}" ToolTipService.InitialShowDelay="500" ToolTipService.ShowDuration="3000" ToolTipService.BetweenShowDelay="10000" ToolTip="Delete Record" Click="Tab2DeleteButton_Click">
+                                    <Rectangle Width="20" Height="20" Fill="White">
+                                        <Rectangle.OpacityMask>
+                                            <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_delete}" />
+                                        </Rectangle.OpacityMask>
+                                    </Rectangle>
+                                </Button>
+
+                            </Grid>
+
+                            <Grid Grid.Row="2" Grid.Column="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Grid.Column="0" Content="Name:" FontSize="15" FontWeight="SemiBold" Margin="10,10,0,10"/>
+                                <TextBox x:Name="Tab2NameTextBox" Grid.Column="1" Height="25" Width="190" FontSize="14" IsEnabled="False"/>
+
+                                <Label Grid.Column="2" Content="Father/Husband Name:" FontSize="15" FontWeight="SemiBold" Margin="10,10,0,10"/>
+                                <TextBox x:Name="Tab2FHNameTextBox" Grid.Column="3" Height="25" Width="190" FontSize="14" IsEnabled="False"/>
+
+                                <Label Grid.Column="4" Content="Relation:" FontSize="15" FontWeight="SemiBold" Margin="10,10,0,10"/>
+                                <TextBox x:Name="Tab2RelationTextBox" Grid.Column="5" Height="25" Width="145" FontSize="14" IsEnabled="False"/>
+
+                                <Label Grid.Column="6" Content="Days Worked:" FontSize="15" FontWeight="SemiBold" Margin="10,10,0,10"/>
+                                <TextBox x:Name="Tab2WorkingTextBox" Grid.Column="7" Height="25" Width="40" IsEnabled="False" MaxLength="2" FontSize="14"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" PreviewTextInput="EidTextBox_PreviewTextInput"/>
+                            </Grid>
+
+                            <Grid Grid.Row="3" Grid.Column="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Border Grid.Row="0" Grid.Column="0" BorderBrush="Black" BorderThickness="1">
+                                    <Border Background="#FF2BA8A8" Height="25" Width="300" CornerRadius="15" Margin="5" HorizontalAlignment="Center">
+                                        <TextBlock Text="Earnings (₹)" Foreground="White" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </Border>
+
+                                <Border Grid.Row="1" Grid.Column="0" BorderBrush="Black" BorderThickness="1">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Grid.Row="0" Grid.Column="0" Content="Basic Wage:" FontSize="15" FontWeight="SemiBold" Margin="5"/>
+                                        <TextBox x:Name="Tab2BasicWageTextBox" Grid.Row="0" Grid.Column="1" IsEnabled="False" Height="25" Width="250" Text="{Binding Path=BEarnings,ElementName=Mathematics,UpdateSourceTrigger=PropertyChanged}" PreviewTextInput="GlobalTextBox_PreviewTextInput"/>
+
+                                        <Label Grid.Row="1" Grid.Column="0" Content="Dearness Allowance:" FontSize="15" FontWeight="SemiBold" Margin="5"/>
+                                        <TextBox x:Name="Tab2DATextBox" Grid.Row="1" Grid.Column="1" IsEnabled="False" Height="25" Width="250" Text="{Binding Path=DAEarnings,ElementName=Mathematics,UpdateSourceTrigger=PropertyChanged}" PreviewTextInput="GlobalTextBox_PreviewTextInput"/>
+
+                                        <Label Grid.Row="2" Grid.Column="0" Content="Conveyance Allowance:" FontSize="15" FontWeight="SemiBold" Margin="5"/>
+                                        <TextBox x:Name="Tab2ConTextBox" Grid.Row="2" Grid.Column="1" IsEnabled="False" Height="25" Width="250" Text="{Binding Path=CAEarnings,ElementName=Mathematics,UpdateSourceTrigger=PropertyChanged}" PreviewTextInput="GlobalTextBox_PreviewTextInput"/>
+
+                                        <Label Grid.Row="3" Grid.Column="0" Content="Medical Allowance:" FontSize="15" FontWeight="SemiBold" Margin="5"/>
+                                        <TextBox x:Name="Tab2MediTextBox" Grid.Row="3" Grid.Column="1" IsEnabled="False" Height="25" Width="250" Text="{Binding Path=MAEarnings,ElementName=Mathematics,UpdateSourceTrigger=PropertyChanged}" PreviewTextInput="GlobalTextBox_PreviewTextInput"/>
+
+                                        <Label Grid.Row="4" Grid.Column="0" Content="House Rent Allowance:" FontSize="15" FontWeight="SemiBold" Margin="5"/>
+                                        <TextBox x:Name="Tab2HRATextBox" Grid.Row="4" Grid.Column="1" IsEnabled="False" Height="25" Width="250" Text="{Binding Path=HRAEarnings,ElementName=Mathematics,UpdateSourceTrigger=PropertyChanged}" PreviewTextInput="GlobalTextBox_PreviewTextInput"/>
+
+                                        <Label Grid.Row="5" Grid.Column="0" Content="Food Allowance:" FontSize="15" FontWeight="SemiBold" Margin="5"/>
+                                        <TextBox x:Name="Tab2FoodTextBox" Grid.Row="5" Grid.Column="1" IsEnabled="False" Height="25" Width="250" Text="{Binding Path=FAEarnings,ElementName=Mathematics,UpdateSourceTrigger=PropertyChanged}" PreviewTextInput="GlobalTextBox_PreviewTextInput"/>
+
+                                        <Label Grid.Row="6" Grid.Column="0" Content="Special Allowance:" FontSize="15" FontWeight="SemiBold" Margin="5"/>
+                                        <TextBox x:Name="Tab2SpecTextBox" Grid.Row="6" Grid.Column="1" IsEnabled="False" Height="25" Width="250" Text="{Binding Path=SAEarnings,ElementName=Mathematics,UpdateSourceTrigger=PropertyChanged}" PreviewTextInput="GlobalTextBox_PreviewTextInput"/>
+
+                                        <Label Grid.Row="7" Grid.Column="0" Content="Other Amount:" FontSize="15" FontWeight="SemiBold" Margin="5"/>
+                                        <TextBox x:Name="Tab2OthTextBox" Grid.Row="7" Grid.Column="1" IsEnabled="False" Height="25" Width="250" Text="{Binding Path=OEarnings,ElementName=Mathematics,UpdateSourceTrigger=PropertyChanged}" PreviewTextInput="GlobalTextBox_PreviewTextInput"/>
+                                    </Grid>
+                                </Border>
+
+                                <Border Grid.Row="0" Grid.Column="1" BorderBrush="Black" BorderThickness="1">
+                                    <Border Background="#FF2BA8A8" Height="25" Width="300" CornerRadius="15" Margin="5" HorizontalAlignment="Center">
+                                        <TextBlock Text="Deductions (₹)" Foreground="White" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </Border>
+
+                                <Border Grid.Row="1" Grid.Column="1" BorderBrush="Black" BorderThickness="1">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Grid.Row="0" Grid.Column="0" Content="TDS/Tax:" FontSize="15" FontWeight="SemiBold" Margin="5"/>
+                                        <TextBox x:Name="Tab2TaxTextBox" Grid.Row="0" Grid.Column="1" IsEnabled="False" Height="25" Width="250" HorizontalAlignment="Left" Text="{Binding Path=TaxDeductions,ElementName=Mathematics,UpdateSourceTrigger=PropertyChanged}" PreviewTextInput="GlobalTextBox_PreviewTextInput"/>
+
+                                        <Label Grid.Row="1" Grid.Column="0" Content="EPF:" FontSize="15" FontWeight="SemiBold" Margin="5"/>
+
+                                        <Grid x:Name="Tab2EPFTextBoxGrid" Grid.Row="1" Grid.Column="1" Width="250" Height="26" IsEnabled="False" HorizontalAlignment="Left">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBox x:Name="Tab2EPFTextBox" Height="25" Width="250" Text="{Binding Path=EPFDeductions,ElementName=Mathematics,UpdateSourceTrigger=PropertyChanged}" PreviewTextInput="GlobalTextBox_PreviewTextInput"/>
+                                            <Button x:Name="EPFInsideButton" Grid.Column="1" HorizontalAlignment="Right" Width="25" FontFamily="Segoe MDL2 Assets" FontSize="11" Content="&#xE117;" Cursor="Hand" ToolTipService.InitialShowDelay="500" ToolTipService.ShowDuration="3000" ToolTipService.BetweenShowDelay="10000" ToolTip="Auto Calculate" Click="EPFInsideButton_Click"/>
+                                        </Grid>
+
+                                        <Label Grid.Row="2" Grid.Column="0" Content="ESIC:" FontSize="15" FontWeight="SemiBold" Margin="5"/>
+                                        <Grid x:Name="Tab2ESICTextBoxGrid" Grid.Row="2" Grid.Column="1" Width="250" Height="26" IsEnabled="False" HorizontalAlignment="Left">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBox x:Name="Tab2ESICTextBox" Grid.Row="2" Grid.Column="1" Height="25" Width="250" Text="{Binding Path=ESICDeductions,ElementName=Mathematics,UpdateSourceTrigger=PropertyChanged}" PreviewTextInput="GlobalTextBox_PreviewTextInput"/>
+                                            <Button x:Name="ESICInsideButton" Grid.Column="1" HorizontalAlignment="Right" Width="25" FontFamily="Segoe MDL2 Assets" FontSize="11" Content="&#xE117;" Cursor="Hand" ToolTipService.InitialShowDelay="200" ToolTipService.ShowDuration="10000" ToolTipService.BetweenShowDelay="10000" ToolTip="Auto Calculate. ESIC is calculating according to ESIC rules and parameters given in 'Settings > Rate' with taking maximum wage limit into consideration" Click="ESICInsideButton_Click"/>
+                                        </Grid>                                        
+                                        
+                                        <Label Grid.Row="3" Grid.Column="0" Content="Loan/Advance:" FontSize="15" FontWeight="SemiBold" Margin="5"/>
+                                        <TextBox x:Name="Tab2AdvTextBox" Grid.Row="3" Grid.Column="1" IsEnabled="False" Height="25" Width="250" HorizontalAlignment="Left" Text="{Binding Path=LADeductions,ElementName=Mathematics,UpdateSourceTrigger=PropertyChanged}" PreviewTextInput="GlobalTextBox_PreviewTextInput"/>
+
+                                        <Label Grid.Row="4" Grid.Column="0" Content="Other Deduction:" FontSize="15" FontWeight="SemiBold" Margin="5"/>
+                                        <TextBox x:Name="Tab2OthDedTextBox" Grid.Row="4" Grid.Column="1" IsEnabled="False" Height="25" Width="250" HorizontalAlignment="Left" Text="{Binding Path=ODeductions,ElementName=Mathematics,UpdateSourceTrigger=PropertyChanged}" PreviewTextInput="GlobalTextBox_PreviewTextInput"/>
+                                        
+                                        <Border Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" BorderBrush="Black" BorderThickness="1"/>
+
+                                        <Label Grid.Row="6" Grid.Column="0" Content="Payment Mode:" FontSize="15" FontWeight="SemiBold" Margin="5"/>
+                                        <ComboBox x:Name="Tab2ModeComboBox" Grid.Row="6" Grid.Column="1" IsEnabled="False" Height="25" Width="250" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Select Payment Mode"  SelectionChanged="Tab2ModeComboBox_SelectionChanged">
+                                            <ComboBoxItem Content="Online (Net Banking)"/>
+                                            <ComboBoxItem Content="Cheque"/>
+                                            <ComboBoxItem Content="Cash"/>
+                                        </ComboBox>
+
+                                        <Grid Grid.Row="7" Grid.Column="1">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBox x:Name="Tab2IFSCTextBox" Grid.Row="0" Grid.Column="0" IsEnabled="False" Height="25" Width="150" HorizontalAlignment="Left" Margin="0,2" FontSize="12" Visibility="Collapsed"/>
+                                            <TextBox x:Name="Tab2AccountTextBox" Grid.Row="0" Grid.Column="1" IsEnabled="False" Height="25" HorizontalAlignment="Stretch" Margin="2" FontSize="12" Visibility="Collapsed"/>
+
+                                            <TextBox x:Name="Tab2ChequeTextBox" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" IsEnabled="False" Height="25" Width="250" HorizontalAlignment="Left" Margin="0,2" FontSize="12" Controls:TextBoxHelper.Watermark="Cheque/DD no (Optional)" Visibility="Collapsed"/>
+                                        </Grid>
+                                    </Grid>
+                                </Border>
+                            </Grid>
+
+                            <Border Grid.Row="4" Grid.Column="0" BorderBrush="Black" BorderThickness="1">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Row="4" Grid.Column="0" Content="Net Wages:" FontSize="15" FontWeight="SemiBold" Margin="5"/>
+                                    <TextBox x:Name="Tab2NetTextBox" Grid.Row="4" Grid.Column="1" FontSize="15" FontWeight="SemiBold" Height="25" Width="250" IsReadOnly="True">
+                                        <TextBox.Text>
+                                            <MultiBinding Converter="{StaticResource TotalConverter}">
+                                                <Binding Path="BEarnings"  ElementName="Mathematics"/>
+                                                <Binding Path="DAEarnings"  ElementName="Mathematics"/>
+                                                <Binding Path="CAEarnings"  ElementName="Mathematics"/>
+                                                <Binding Path="MAEarnings"  ElementName="Mathematics"/>
+                                                <Binding Path="HRAEarnings"  ElementName="Mathematics"/>
+                                                <Binding Path="FAEarnings"  ElementName="Mathematics"/>
+                                                <Binding Path="SAEarnings"  ElementName="Mathematics"/>
+                                                <Binding Path="OEarnings"  ElementName="Mathematics"/>
+                                                <Binding Path="TaxDeductions"  ElementName="Mathematics"/>
+                                                <Binding Path="EPFDeductions"  ElementName="Mathematics"/>
+                                                <Binding Path="ESICDeductions"  ElementName="Mathematics"/>
+                                                <Binding Path="LADeductions"  ElementName="Mathematics"/>
+                                                <Binding Path="ODeductions"  ElementName="Mathematics"/>
+                                            </MultiBinding>
+                                        </TextBox.Text>                                        
+                                    </TextBox>                                    
+                                </Grid>
+                            </Border>
+                        </Grid>
+                    </ScrollViewer>
+                </Controls:MetroTabItem>
+                <!--#endregion-->
+
+                <!--#region Tab3-->
+                <Controls:MetroTabItem x:Name="ReportTab" Cursor="Hand" PreviewMouseDown="ReportTab_PreviewMouseDown">
+                    <TabItem.Header>
+                        <DockPanel LastChildFill="True">
+                            <Rectangle DockPanel.Dock="Left" Margin="0,0,5,0" Width="20" Height="20" Fill="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}, Path=(TextElement.Foreground)}">
+                                <Rectangle.OpacityMask>
+                                    <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_book_list}" />
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                            <Label Padding="0" Foreground="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}, Path=(TextElement.Foreground)}" FontSize="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}, Path=(TextElement.FontSize)}">
+                                Reports
+                            </Label>
+                        </DockPanel>
+                    </TabItem.Header>
+                    <Grid>
+                        <Grid.Background>
+                            <ImageBrush ImageSource="/Assets/background.jpg" />
+                        </Grid.Background>
+
+                        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Expander x:Name="EmpStatusExpander" Grid.Row="0" Margin="5" Header="Employee Status">
+                                    <Grid>
+                                        <GroupBox x:Name="EmployeeGroupBox" Grid.Row="0" Header="Employees">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                </Grid.RowDefinitions>
+
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                </Grid.ColumnDefinitions>
+                                                
+                                                <Label Grid.Row="0" Grid.Column="0" Content="Total Employee" FontWeight="Black" Margin="10"/>
+                                                <Label Grid.Row="0" Grid.Column="1" Content="Live Employee" FontWeight="Black" Margin="10"/>
+
+                                                <TextBox x:Name="Tab3TotalEmpTextBox" Grid.Row="1" Grid.Column="0" Width="80" Margin="10" IsReadOnly="True" IsReadOnlyCaretVisible="True"/>
+                                                <TextBox x:Name="Tab3LeaveEmpTextBox" Grid.Row="1" Grid.Column="1" Width="80" Margin="10" IsReadOnly="True" IsReadOnlyCaretVisible="True"/>                                               
+                                            </Grid>
+                                        </GroupBox>
+                                    </Grid>
+                                </Expander>
+
+                                <Expander x:Name="EmpReportsExpander" Grid.Row="1" Margin="5" Header="Employee Reports">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+
+                                        <GroupBox x:Name="EmployeeWiseGroupBox" Grid.Row="0" Header="Print Employee Details">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                </Grid.ColumnDefinitions>
+
+                                                <Label Grid.Row="0" Grid.Column="0" Content="Eid:" Background="White" Margin="10"/>
+                                                <TextBox x:Name="Tab3EidTextBox" Grid.Row="0" Grid.Column="1" FontSize="14" Margin="10" Width="55" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" PreviewTextInput="EidTextBox_PreviewTextInput"/>
+                                                <Button x:Name="Tab3EmpDetailsGoButton" Grid.Row="0" Grid.Column="2" Height="25" Width="55" Content="GO" Cursor="Hand" Margin="10" HorizontalAlignment="Left" VerticalAlignment="Center" Click="Tab3EmpDetailsGoButton_Click"/>                                                
+                                            </Grid>
+                                        </GroupBox>                                        
+
+                                        <GroupBox x:Name="Tab3PayGroupBox" Grid.Row="1" Header="Pay Slip">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                </Grid.RowDefinitions>
+                                                <Border Grid.Row="0" BorderThickness="0.8" BorderBrush="#FF41B1E1">
+                                                    <StackPanel Height="25" Width="250" Background="#FF41B1E1" HorizontalAlignment="Left" Margin="1">
+                                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Detailed Pay Slip" Foreground="White" FontWeight="SemiBold" Margin="5"/>
+                                                    </StackPanel>
+                                                </Border>
+                                                
+                                                <Grid Grid.Row="1">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="Auto"/>
+                                                    </Grid.RowDefinitions>
+
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                    </Grid.ColumnDefinitions>
+
+                                                    <Label Grid.Row="0" Grid.Column="0" Content="Eid:" Background="White" Margin="10"/>
+                                                    <TextBox x:Name="Tab3SalaryEidTextBox" Grid.Row="0" Grid.Column="1" FontSize="14" Margin="0,10,10,10" Width="55" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" PreviewTextInput="EidTextBox_PreviewTextInput"/>
+                                                    <DatePicker x:Name="Tab3SalaryDatePicker" Grid.Row="0" Grid.Column="2" Height="25" Width="120" Margin="10" HorizontalAlignment="Left" VerticalAlignment="Center" Visibility="Collapsed"/>
+                                                    <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Horizontal" Margin="0,10">
+                                                        <ComboBox x:Name="Tab3MonthComboBox" Controls:TextBoxHelper.Watermark="Month" FontSize="14" Margin="2" DropDownClosed="Tab3MonthComboBox_DropDownClosed">
+                                                            <ComboBoxItem Content="01"/>
+                                                            <ComboBoxItem Content="02"/>
+                                                            <ComboBoxItem Content="03"/>
+                                                            <ComboBoxItem Content="04"/>
+                                                            <ComboBoxItem Content="05"/>
+                                                            <ComboBoxItem Content="06"/>
+                                                            <ComboBoxItem Content="07"/>
+                                                            <ComboBoxItem Content="08"/>
+                                                            <ComboBoxItem Content="09"/>
+                                                            <ComboBoxItem Content="10"/>
+                                                            <ComboBoxItem Content="11"/>
+                                                            <ComboBoxItem Content="12"/>
+                                                        </ComboBox>
+
+                                                        <ComboBox x:Name="Tab3YearComboBox" Controls:TextBoxHelper.Watermark="Year" FontSize="14" Margin="2" DropDownClosed="Tab3YearComboBox_DropDownClosed"/>
+                                                    </StackPanel>
+                                                    <Button x:Name="Tab3SalaryGoButton" Grid.Row="1" Grid.Column="0" Height="25" Width="55" Content="Go" Margin="10" HorizontalAlignment="Left" Click="Tab3SalaryGoButton_Click"/>
+                                                </Grid>
+
+                                                <Border Grid.Row="2" BorderThickness="0.8" BorderBrush="#FF41B1E1">
+                                                    <StackPanel Height="25" Width="250" Background="#FF41B1E1" HorizontalAlignment="Left" Margin="1">
+                                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontWeight="SemiBold" Margin="5"><Run Text="Summari"/><Run Text="s"/><Run Text="ed Pay Slip"/></TextBlock>
+                                                    </StackPanel>
+                                                </Border>
+
+                                                <Grid Grid.Row="3">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="Auto"/>
+                                                    </Grid.RowDefinitions>
+
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                    </Grid.ColumnDefinitions>
+
+                                                    <RadioButton x:Name="Tab3ASingleRadioButton" Grid.Row="0" Grid.Column="0" GroupName="3A" Content="Single" HorizontalAlignment="Center" Margin="5" />
+                                                    <RadioButton x:Name="Tab3ABulkRadioButton" Grid.Row="0" Grid.Column="1" GroupName="3A" Content="Bulk" HorizontalAlignment="Center" IsChecked="True" Margin="5"/>
+
+                                                    <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="Auto"/>
+                                                            <RowDefinition Height="Auto"/>
+                                                        </Grid.RowDefinitions>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="Auto"/>
+                                                            <ColumnDefinition Width="Auto"/>
+                                                            <ColumnDefinition Width="Auto"/>
+                                                        </Grid.ColumnDefinitions>
+                                                        
+                                                        <Label Grid.Row="0" Grid.Column="0" Content="Eid:" Background="White" Margin="10"/>
+                                                        <TextBox x:Name="Tab3EidSTextBox" Grid.Row="0" Grid.Column="1" FontSize="14" Margin="10" Width="55" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Visibility="{Binding IsChecked,ElementName=Tab3ASingleRadioButton,Converter={StaticResource BoolToVisibility}}" PreviewTextInput="EidTextBox_PreviewTextInput"/>
+                                                        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" Visibility="{Binding IsChecked,ElementName=Tab3ABulkRadioButton,Converter={StaticResource BoolToVisibility}}">
+                                                            <TextBox x:Name="Tab3EidSRangeTextBox" FontSize="14" Margin="0,10" Width="55" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="Eid 1" PreviewTextInput="EidTextBox_PreviewTextInput"/>
+                                                            <Label Content="-" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" VerticalContentAlignment="Center"/>
+                                                            <TextBox x:Name="Tab3EidERangeTextBox" FontSize="14" Margin="0,10,10,10" Width="55" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="Eid 2" PreviewTextInput="EidTextBox_PreviewTextInput"/>
+                                                        </StackPanel>
+                                                        <DatePicker x:Name="Tab3SSDatePicker" Grid.Row="1" Grid.Column="1" Height="25" Width="120" Margin="10" HorizontalAlignment="Left" VerticalAlignment="Center" Visibility="Collapsed"/>
+                                                        <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Horizontal" Margin="0,10">
+                                                            <ComboBox x:Name="Tab3SSMonthComboBox" Controls:TextBoxHelper.Watermark="Month" FontSize="14" Margin="2" DropDownClosed="Tab3SSMonthComboBox_DropDownClosed">
+                                                                <ComboBoxItem Content="01"/>
+                                                                <ComboBoxItem Content="02"/>
+                                                                <ComboBoxItem Content="03"/>
+                                                                <ComboBoxItem Content="04"/>
+                                                                <ComboBoxItem Content="05"/>
+                                                                <ComboBoxItem Content="06"/>
+                                                                <ComboBoxItem Content="07"/>
+                                                                <ComboBoxItem Content="08"/>
+                                                                <ComboBoxItem Content="09"/>
+                                                                <ComboBoxItem Content="10"/>
+                                                                <ComboBoxItem Content="11"/>
+                                                                <ComboBoxItem Content="12"/>
+                                                            </ComboBox>
+
+                                                            <ComboBox x:Name="Tab3SSYearComboBox" Controls:TextBoxHelper.Watermark="Year" FontSize="14" Margin="2" DropDownClosed="Tab3SSYearComboBox_DropDownClosed"/>
+                                                        </StackPanel>
+                                                        <Button x:Name="Tab3SSGoButton" Grid.Row="2" Grid.Column="0" Height="25" Width="55" Content="Go" Margin="10" HorizontalAlignment="Left" Click="Tab3SSGoButton_Click"/>
+                                                    </Grid>                                                    
+                                                </Grid>
+                                            </Grid>
+                                        </GroupBox>
+                                    </Grid>
+                                </Expander>
+                                                                
+                                <Expander x:Name="OrgReportsExpander" Grid.Row="2" Margin="5" Header="Organization Reports">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+
+                                        <GroupBox Grid.Row="0" Header=" Total Month Wise Payments">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                </Grid.RowDefinitions>
+
+                                                <Grid>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="Auto"/>
+                                                    </Grid.RowDefinitions>
+
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                    </Grid.ColumnDefinitions>
+
+                                                    <Label Grid.Row="0" Grid.Column="0" Content="Select Month:" Background="White" Margin="10"/>
+
+                                                    <DatePicker x:Name="Tab3MonthOrgDatePicker" Grid.Row="1" Grid.Column="1" Height="25" Width="120" Margin="10" HorizontalAlignment="Left" VerticalAlignment="Center" Visibility="Collapsed"/>
+                                                    <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Horizontal" Margin="0,10">
+                                                        <ComboBox x:Name="Tab3MonthOrgComboBox" Controls:TextBoxHelper.Watermark="Month" FontSize="14" Margin="2" DropDownClosed="Tab3MonthOrgComboBox_DropDownClosed">
+                                                            <ComboBoxItem Content="01"/>
+                                                            <ComboBoxItem Content="02"/>
+                                                            <ComboBoxItem Content="03"/>
+                                                            <ComboBoxItem Content="04"/>
+                                                            <ComboBoxItem Content="05"/>
+                                                            <ComboBoxItem Content="06"/>
+                                                            <ComboBoxItem Content="07"/>
+                                                            <ComboBoxItem Content="08"/>
+                                                            <ComboBoxItem Content="09"/>
+                                                            <ComboBoxItem Content="10"/>
+                                                            <ComboBoxItem Content="11"/>
+                                                            <ComboBoxItem Content="12"/>
+                                                        </ComboBox>
+
+                                                        <ComboBox x:Name="Tab3YearOrgComboBox" Controls:TextBoxHelper.Watermark="Year" FontSize="14" Margin="2" DropDownClosed="Tab3YearOrgComboBox_DropDownClosed"/>
+                                                    </StackPanel>
+                                                    <Button x:Name="Tab3MonthOrgGoButton" Grid.Row="2" Grid.Column="0" Height="25" Width="55" Content="Go" Margin="10" HorizontalAlignment="Left" Click="Tab3MonthOrgGoButton_Click"/>
+                                                </Grid>
+                                            </Grid>                                            
+                                        </GroupBox>
+
+                                        <GroupBox Grid.Row="1" Header="Yearly Payments">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                </Grid.RowDefinitions>
+
+                                                <StackPanel Grid.Row="0" Orientation="Horizontal">
+                                                    <RadioButton x:Name="Tab3YearOnlyRadioButton" Grid.Row="0" Grid.Column="0" GroupName="3Y" Content="Year Wise for all employee" HorizontalAlignment="Center" IsChecked="True" Margin="5" />
+                                                    <RadioButton x:Name="Tab3YearWithEidRadioButton" Grid.Row="0" Grid.Column="1" GroupName="3Y" Content="Year Wise for a employee" HorizontalAlignment="Center" Margin="5"/>
+                                                </StackPanel>
+
+                                                <Grid Grid.Row="1">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="Auto"/>
+                                                    </Grid.RowDefinitions>
+
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                    </Grid.ColumnDefinitions>
+
+                                                    <Label Grid.Row="0" Grid.Column="0" Content="Select Year:" Background="White" Margin="10"/>
+                                                    <ComboBox x:Name="Tab3YYearOrgComboBox" Grid.Row="0" Grid.Column="1" Controls:TextBoxHelper.Watermark="Year" FontSize="14" Margin="0,5" Width="150" Height="25"/>
+                                                    <Label Grid.Row="1" Grid.Column="0" Content="Eid:" Background="White" Margin="10" Visibility="{Binding IsChecked,ElementName=Tab3YearWithEidRadioButton,Converter={StaticResource BoolToVisibility}}"/>
+                                                    <TextBox x:Name="Tab3YearEidTextBox" Grid.Row="1" Grid.Column="1" FontSize="14" Margin="0,10,10,10" Width="55" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Visibility="{Binding IsChecked,ElementName=Tab3YearWithEidRadioButton,Converter={StaticResource BoolToVisibility}}" PreviewTextInput="EidTextBox_PreviewTextInput"/>
+                                                    <Button x:Name="Tab3YearOrgGoButton" Grid.Row="2" Grid.Column="0" Height="25" Width="55" Content="Go" Margin="10" HorizontalAlignment="Left" Click="Tab3YearOrgGoButton_Click"/>
+                                                </Grid>
+                                            </Grid>  
+                                        </GroupBox>
+                                    </Grid>                                   
+                                </Expander>                                
+                            </Grid>
+                        </ScrollViewer>
+                    </Grid>
+                </Controls:MetroTabItem>
+                <!--#endregion-->                
+
+                <!--#region Tab4-->
+                <Controls:MetroTabItem Cursor="Hand">
+                    <TabItem.Header>
+                        <DockPanel LastChildFill="True">
+                            <Rectangle DockPanel.Dock="Left" Margin="0,0,5,0" Width="20" Height="20" Fill="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}, Path=(TextElement.Foreground)}">
+                                <Rectangle.OpacityMask>
+                                    <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_settings}" />
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                            <Label Padding="0" Foreground="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}, Path=(TextElement.Foreground)}" FontSize="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}, Path=(TextElement.FontSize)}">
+                                Settings
+                            </Label>
+                        </DockPanel>
+                    </TabItem.Header>
+                    <Grid>
+                        <Grid.Background>
+                            <ImageBrush ImageSource="/Assets/background.jpg" />
+                        </Grid.Background>
+
+                        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Expander x:Name="RatesExpander" Margin="5" Header="Rates" Expanded="RatesExpander_Expanded">
+                                    <Grid>
+                                        <GroupBox x:Name="ParametersGroupBox" Grid.Row="0" Header="Parameters">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                </Grid.RowDefinitions>
+
+                                                <Grid Grid.Row="0">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="Auto"/>
+                                                    </Grid.RowDefinitions>
+
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                    </Grid.ColumnDefinitions>
+
+                                                    <Label Grid.Row="0" Grid.Column="0" Content="Basis" FontWeight="Black" Margin="10"/>
+                                                    <Label Grid.Row="0" Grid.Column="1" Content="Percent" FontWeight="Black" Margin="10"/>
+
+                                                    <Label Grid.Row="1"  Grid.Column="0" Content="EPF:" Margin="10"/>
+                                                    <TextBox x:Name="Tab4EPFTextBox" Grid.Row="1" Grid.Column="1" Width="80" Margin="10" HorizontalAlignment="Left"/>
+
+                                                    <Label Grid.Row="2"  Grid.Column="0" Content="ESIC:" Margin="10"/>
+                                                    <TextBox x:Name="Tab4ESICTextBox" Grid.Row="2" Grid.Column="1" Width="80" Margin="10" HorizontalAlignment="Left"/>
+                                                </Grid>
+
+                                                <Grid Grid.Row="1">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="Auto"/>
+                                                    </Grid.RowDefinitions>
+
+                                                    <Label Grid.Row="0" Content="ESIC Minimum Wage Per Day" FontWeight="Black"/>
+                                                    <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="10,0">
+                                                        <TextBox x:Name="Tab4ESICMinWageTextBox" Height="25" Width="80"/>
+                                                        <Border BorderBrush="#FF40B0E0" BorderThickness="0.6" Margin="10,0">
+                                                            <TextBlock Width="380" Height="50" TextWrapping="Wrap" Margin="2" Text="Employees in receipt of a daily average wage upto specified Rupees (e.g Rs.137/-) are exempted from payment of contribution. Employers will however contribute their own share in respect of these employees."/>
+                                                        </Border>
+                                                        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center">
+                                                            <Hyperlink x:Name="Tab4KMHyperlink" Click="Tab4KMHyperlink_Click">Know More</Hyperlink>
+                                                        </TextBlock>
+                                                    </StackPanel>
+                                                    <Label Grid.Row="2" Content="ESIC Maximum Wage Ceiling" FontWeight="Black"/>
+                                                    <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="10,0">
+                                                        <TextBox x:Name="Tab4ESICWageCeilingTextBox" Height="25" Width="80"/>
+                                                        <Border BorderBrush="#FF40B0E0" BorderThickness="0.6" Margin="10,0">
+                                                            <TextBlock Width="380" Height="50" TextWrapping="Wrap" Margin="2" Text="Maximum Wage Ceiling is upper limit where employee cover for ESIC Scheme, Update this limit if rules are changed or if change in future."/>
+                                                        </Border>
+                                                    </StackPanel>
+
+                                                    <Button x:Name="ParametersUpdateButton" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Content="Update" Width="110" Height="28" Margin="10" HorizontalAlignment="Left" Click="ParametersUpdateButton_Click"/>
+                                                </Grid>
+                                            </Grid>                                            
+                                        </GroupBox>
+                                    </Grid>
+                                </Expander>
+
+                                <Expander Grid.Row="1" Margin="5" Header="Backup and Restore">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+
+                                        <GroupBox x:Name="BackupGroupBox" Grid.Row="0" Header="Backup">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                </Grid.RowDefinitions>
+
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                </Grid.ColumnDefinitions>
+
+                                                <Label Grid.Row="0" Grid.Column="0" Content="Backup Data:" Background="White" Margin="10"/>
+                                                <Button x:Name="BackupButton" Grid.Row="0" Grid.Column="1" Height="25" Width="100" Content="Backup" Margin="10" HorizontalAlignment="Left" Click="BackupButton_Click"/>
+                                                <Controls:MetroProgressBar x:Name="BackupProgressBar" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Height="25" Width="350" Minimum="0" Maximum="100" Margin="10" HorizontalAlignment="Left" BorderThickness="0.8" BorderBrush="#FF065255"/>
+                                                <Label Grid.Row="2" Grid.Column="0" Margin="10" Content="Status:"/>
+                                                <TextBlock x:Name="BackupStatusTextBlock" Grid.Row="2" Grid.Column="1" FontSize="18" Margin="10" TextWrapping="Wrap"/>
+                                            </Grid>
+                                        </GroupBox>
+
+                                        <GroupBox x:Name="RestoreGroupBox" Grid.Row="1" Header="Restore">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                </Grid.RowDefinitions>
+
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                </Grid.ColumnDefinitions>
+
+                                                <Label Grid.Row="0" Grid.Column="0" Content="Restore Data:" Background="White" Margin="10"/>
+                                                <Button x:Name="RestoreButton" Grid.Row="0" Grid.Column="1" Height="25" Width="100" Content="Restore" Margin="10" HorizontalAlignment="Left" Click="RestoreButton_Click"/>
+                                                <Controls:MetroProgressBar x:Name="RestoreProgressBar" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Height="25" Width="350" Minimum="0" Maximum="100" Margin="10" HorizontalAlignment="Left" BorderThickness="0.8" BorderBrush="#FF065255"/>
+                                                <Label Grid.Row="2" Grid.Column="0" Margin="10" Content="Status:"/>
+                                                <TextBlock x:Name="RestoreStatusTextBlock" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" FontSize="18" Margin="10" TextWrapping="Wrap"/>
+                                            </Grid>
+                                        </GroupBox>
+                                    </Grid>
+                                </Expander>
+                            </Grid>
+                        </ScrollViewer>                        
+                    </Grid>
+                </Controls:MetroTabItem>
+                <!--#endregion-->
+            </Controls:MetroAnimatedTabControl>
+        </Grid>
+    </Grid>
+</Controls:MetroWindow>

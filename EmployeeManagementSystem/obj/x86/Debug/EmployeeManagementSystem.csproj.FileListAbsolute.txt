@@ -1,0 +1,320 @@
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Reports\EmployeeReport.rpt
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Reports\SalaryReport.rpt
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Reports\SummarySalaryReport.rpt
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Reports\EmployeeReport.cs
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Reports\SalaryReport.cs
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Reports\SummarySalaryReport.cs
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Assets\HelpImport.pdf
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Assets\Template.xlsx
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Assets\noimage.jpg
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Assets\nosource.png
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Assets\Loading.gif
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\EmployeeManagementSystem.exe.config
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\EmployeeManagementSystem.exe.manifest
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\EmployeeManagementSystem.application
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\EmployeeManagementSystem.exe
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\EmployeeManagementSystem.pdb
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Camera_NET.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.Shared.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\DirectShowLib-2010.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\EntityFramework.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\EntityFramework.SqlServer.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Excel.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\FlashControlV71.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\MahApps.Metro.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\MetroFramework.Design.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\MetroFramework.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\MetroFramework.Fonts.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Microsoft.SqlServer.Smo.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Microsoft.SqlServer.SmoExtended.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\System.IO.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\System.Runtime.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\System.Threading.Tasks.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Xceed.Wpf.DataGrid.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\ShockwaveFlashObjects.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\System.Windows.Interactivity.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Microsoft.SqlServer.SqlEnum.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Microsoft.SqlServer.Dmf.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Microsoft.SqlServer.RegSvrEnum.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\stdole.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\EntityFramework.xml
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\EntityFramework.SqlServer.xml
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\MahApps.Metro.pdb
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\MahApps.Metro.xml
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\System.IO.xml
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\System.Runtime.xml
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\System.Threading.Tasks.xml
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.csproj.App.config
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\Resources\Icons.baml
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\Resources\IconsNonShared.baml
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\MainWindow.g.cs
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\Windows\DataMgmtWindow.g.cs
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\Windows\PrintSelectionWindows.g.cs
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\App.g.cs
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem_MarkupCompile.cache
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem_MarkupCompile.lref
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\App.baml
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\MainWindow.baml
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\Styles.baml
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\Windows\DataMgmtWindow.baml
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\Windows\PrintSelectionWindows.baml
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.g.resources
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.CameraWindow.resources
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.ExportDialog.resources
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.ImportFromExcel.resources
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.Properties.Resources.resources
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.ReportViewerDialog.resources
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.csproj.GenerateResource.cache
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.TrustInfo.xml
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.exe.manifest
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.application
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.csproj.CopyComplete
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.exe
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.pdb
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Reports\OrgMonthWageReport.rpt
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Reports\OrgMonthWageReport.cs
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Reports\OrgYearWageReport.rpt
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Reports\OrgYearWageReport.cs
+C:\Users\ps201\Documents\Visual Studio 2015\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.csprojAssemblyReference.cache
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.csproj.App.config
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\Resources\Icons.baml
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\Resources\IconsNonShared.baml
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\MainWindow.g.cs
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\Windows\DataMgmtWindow.g.cs
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\Windows\PrintSelectionWindows.g.cs
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\App.g.cs
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem_MarkupCompile.cache
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem_MarkupCompile.lref
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.exe
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.pdb
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Reports\EmployeeReport.rpt
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Reports\OrgMonthWageReport.rpt
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Reports\OrgYearWageReport.rpt
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Reports\SalaryReport.rpt
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Reports\SummarySalaryReport.rpt
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Reports\EmployeeReport.cs
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Reports\OrgMonthWageReport.cs
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Reports\OrgYearWageReport.cs
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Reports\SalaryReport.cs
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Reports\SummarySalaryReport.cs
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Assets\HelpImport.pdf
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Assets\Template.xlsx
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Assets\noimage.jpg
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Assets\nosource.png
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Assets\Loading.gif
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\EmployeeManagementSystem.exe.config
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\EmployeeManagementSystem.exe.manifest
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\EmployeeManagementSystem.application
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\EmployeeManagementSystem.exe
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\EmployeeManagementSystem.pdb
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Camera_NET.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\DirectShowLib-2010.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\EntityFramework.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\EntityFramework.SqlServer.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Excel.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\MahApps.Metro.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\MetroFramework.Design.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\MetroFramework.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\MetroFramework.Fonts.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Microsoft.SqlServer.Smo.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Microsoft.SqlServer.SmoExtended.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\System.IO.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\System.Runtime.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\System.Threading.Tasks.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Xceed.Wpf.AvalonDock.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Xceed.Wpf.DataGrid.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Xceed.Wpf.Toolkit.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\System.Windows.Interactivity.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Microsoft.SqlServer.SqlEnum.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Microsoft.SqlServer.Dmf.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Microsoft.SqlServer.RegSvrEnum.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\stdole.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\EntityFramework.xml
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\EntityFramework.SqlServer.xml
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\MahApps.Metro.pdb
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\MahApps.Metro.xml
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\System.IO.xml
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\System.Runtime.xml
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\System.Threading.Tasks.xml
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\App.baml
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\MainWindow.baml
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\Styles.baml
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\Windows\DataMgmtWindow.baml
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\Windows\PrintSelectionWindows.baml
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.g.resources
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.CameraWindow.resources
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.ExportDialog.resources
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.ImportFromExcel.resources
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.Properties.Resources.resources
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.ReportViewerDialog.resources
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.csproj.GenerateResource.cache
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.csproj.CoreCompileInputs.cache
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.TrustInfo.xml
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.exe.manifest
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.application
+F:\shubham backup\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.csproj.CopyComplete
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\EmployeeManagementSystem.exe
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\MahApps.Metro.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\System.Windows.Interactivity.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Reports\EmployeeReport.rpt
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Reports\OrgMonthWageReport.rpt
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Reports\OrgYearWageReport.rpt
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Reports\SalaryReport.rpt
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Reports\SummarySalaryReport.rpt
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Reports\EmployeeReport.cs
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Reports\OrgMonthWageReport.cs
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Reports\OrgYearWageReport.cs
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Reports\SalaryReport.cs
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Reports\SummarySalaryReport.cs
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Assets\HelpImport.pdf
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Assets\Template.xlsx
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Assets\noimage.jpg
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Assets\nosource.png
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Assets\Loading.gif
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\EmployeeManagementSystem.exe.config
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\EmployeeManagementSystem.exe.manifest
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\EmployeeManagementSystem.application
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\EmployeeManagementSystem.pdb
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Camera_NET.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.Shared.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\DirectShowLib-2010.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\EntityFramework.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\EntityFramework.SqlServer.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Excel.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\FlashControlV71.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\MetroFramework.Design.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\MetroFramework.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\MetroFramework.Fonts.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Microsoft.SqlServer.Smo.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Microsoft.SqlServer.SmoExtended.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\System.IO.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\System.Runtime.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\System.Threading.Tasks.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Xceed.Wpf.DataGrid.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\ShockwaveFlashObjects.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Microsoft.SqlServer.SqlEnum.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Microsoft.SqlServer.Dmf.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\Microsoft.SqlServer.RegSvrEnum.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\stdole.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\EntityFramework.xml
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\EntityFramework.SqlServer.xml
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\MahApps.Metro.pdb
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\MahApps.Metro.xml
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\System.IO.xml
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\System.Runtime.xml
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\System.Threading.Tasks.xml
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\bin\x86\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.csproj.App.config
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\MainWindow.baml
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\Resources\Icons.baml
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\Resources\IconsNonShared.baml
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\Styles.baml
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\Windows\DataMgmtWindow.baml
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\Windows\PrintSelectionWindows.baml
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\App.baml
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\MainWindow.g.cs
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\Windows\DataMgmtWindow.g.cs
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\Windows\PrintSelectionWindows.g.cs
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\App.g.cs
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem_MarkupCompile.cache
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem_MarkupCompile.lref
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.g.resources
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.CameraWindow.resources
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.ExportDialog.resources
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.ImportFromExcel.resources
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.Properties.Resources.resources
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.Reports.EmployeeReport.resources
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.ReportViewerDialog.resources
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.csproj.GenerateResource.cache
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.TrustInfo.xml
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.exe.manifest
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.application
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.csproj.CopyComplete
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.exe
+C:\Users\ps201\Documents\Visual Studio 2017\Projects\EmployeeManagementSystemOnlyPart1\EmployeeManagementSystem\obj\x86\Debug\EmployeeManagementSystem.pdb
